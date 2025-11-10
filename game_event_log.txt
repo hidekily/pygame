@@ -1,0 +1,234 @@
+=== TURN-BASED BATTLE GAME - EVENT LOG ===
+
+[2025-11-10 12:37:39] Game Started
+[2025-11-10 12:37:41] Entered character selection
+[2025-11-10 12:37:47] Unit created: Guerreiro (Warrior) - HP:100 ATK:7 DEF:10
+[2025-11-10 12:37:47] Selected: Guerreiro (Warrior)
+[2025-11-10 12:37:49] Unit created: Tanque (Tanker) - HP:100 ATK:10 DEF:11
+[2025-11-10 12:37:49] Selected: Tanque (Tanker)
+[2025-11-10 12:37:51] Unit created: Arqueiro (Warrior) - HP:100 ATK:10 DEF:5
+[2025-11-10 12:37:51] Selected: Arqueiro (Warrior)
+[2025-11-10 12:37:53] AI Team Setup initiated
+[2025-11-10 12:37:53] Unit created: AI12 (Tanker) - HP:100 ATK:3 DEF:7
+[2025-11-10 12:37:53] Unit created: AI94 (Warrior) - HP:100 ATK:6 DEF:6
+[2025-11-10 12:37:53] Unit created: AI58 (Tanker) - HP:100 ATK:2 DEF:15
+[2025-11-10 12:37:53] Turn order created: Player1, AI1, Player2, AI2, Player3, AI3
+[2025-11-10 12:37:53] Battle Started!
+[2025-11-10 12:37:53] Player turn: Guerreiro
+[2025-11-10 12:37:59] Guerreiro gained 5 EXP (Total: 5)
+[2025-11-10 12:37:59] AI12 gained 7 EXP (Total: 7)
+[2025-11-10 12:37:59] ATTACK: Guerreiro -> AI12 | Damage: 5 | AI12 HP: 95/100
+[2025-11-10 12:37:59] AI turn: AI12
+[2025-11-10 12:38:00] AI12 gained 2 EXP (Total: 9)
+[2025-11-10 12:38:00] Guerreiro gained 10 EXP (Total: 15)
+[2025-11-10 12:38:00] ATTACK: AI12 -> Guerreiro | Damage: 2 | Guerreiro HP: 98/100
+[2025-11-10 12:38:00] Player turn: Tanque
+[2025-11-10 12:38:10] Tanque gained 8 EXP (Total: 8)
+[2025-11-10 12:38:10] AI94 gained 6 EXP (Total: 6)
+[2025-11-10 12:38:10] ATTACK: Tanque -> AI94 | Damage: 8 | AI94 HP: 92/100
+[2025-11-10 12:38:10] AI turn: AI94
+[2025-11-10 12:38:10] AI94 gained 0 EXP (Total: 6)
+[2025-11-10 12:38:10] Guerreiro gained 50% bonus EXP (no damage taken)
+[2025-11-10 12:38:10] Guerreiro gained 15 EXP (Total: 30)
+[2025-11-10 12:38:10] ATTACK: AI94 -> Guerreiro | Damage: 0 | Guerreiro HP: 98/100
+[2025-11-10 12:38:11] Player turn: Arqueiro
+[2025-11-10 12:38:13] Arqueiro gained 0 EXP (Total: 0)
+[2025-11-10 12:38:13] AI94 gained 50% bonus EXP (no damage taken)
+[2025-11-10 12:38:13] AI94 gained 9 EXP (Total: 15)
+[2025-11-10 12:38:13] ATTACK: Arqueiro -> AI94 | Damage: 0 | AI94 HP: 92/100
+[2025-11-10 12:38:13] AI turn: AI58
+[2025-11-10 12:38:14] AI58 gained 0 EXP (Total: 0)
+[2025-11-10 12:38:14] Guerreiro gained 50% bonus EXP (no damage taken)
+[2025-11-10 12:38:14] Guerreiro gained 15 EXP (Total: 45)
+[2025-11-10 12:38:14] ATTACK: AI58 -> Guerreiro | Damage: 0 | Guerreiro HP: 98/100
+[2025-11-10 12:38:14] Player turn: Guerreiro
+[2025-11-10 12:38:16] Guerreiro gained 3 EXP (Total: 48)
+[2025-11-10 12:38:16] AI94 gained 6 EXP (Total: 21)
+[2025-11-10 12:38:16] ATTACK: Guerreiro -> AI94 | Damage: 3 | AI94 HP: 89/100
+[2025-11-10 12:38:17] AI turn: AI12
+[2025-11-10 12:38:17] AI12 gained 0 EXP (Total: 9)
+[2025-11-10 12:38:17] Guerreiro gained 50% bonus EXP (no damage taken)
+[2025-11-10 12:38:17] Guerreiro gained 15 EXP (Total: 63)
+[2025-11-10 12:38:17] ATTACK: AI12 -> Guerreiro | Damage: 0 | Guerreiro HP: 98/100
+[2025-11-10 12:38:17] Player turn: Tanque
+[2025-11-10 12:38:18] Tanque gained 11 EXP (Total: 19)
+[2025-11-10 12:38:18] AI94 gained 20% bonus EXP (damage > 10)
+[2025-11-10 12:38:18] AI94 gained 7 EXP (Total: 28)
+[2025-11-10 12:38:18] ATTACK: Tanque -> AI94 | Damage: 11 | AI94 HP: 78/100
+[2025-11-10 12:38:19] AI turn: AI94
+[2025-11-10 12:38:19] AI94 gained 5 EXP (Total: 33)
+[2025-11-10 12:38:19] Guerreiro gained 10 EXP (Total: 73)
+[2025-11-10 12:38:19] ATTACK: AI94 -> Guerreiro | Damage: 5 | Guerreiro HP: 93/100
+[2025-11-10 12:38:19] Player turn: Arqueiro
+[2025-11-10 12:38:20] Arqueiro gained 1 EXP (Total: 1)
+[2025-11-10 12:38:20] AI94 gained 6 EXP (Total: 39)
+[2025-11-10 12:38:20] ATTACK: Arqueiro -> AI94 | Damage: 1 | AI94 HP: 77/100
+[2025-11-10 12:38:20] AI turn: AI58
+[2025-11-10 12:38:21] AI58 gained 0 EXP (Total: 0)
+[2025-11-10 12:38:21] Guerreiro gained 50% bonus EXP (no damage taken)
+[2025-11-10 12:38:21] Guerreiro gained 15 EXP (Total: 88)
+[2025-11-10 12:38:21] ATTACK: AI58 -> Guerreiro | Damage: 0 | Guerreiro HP: 93/100
+[2025-11-10 12:38:21] Player turn: Guerreiro
+[2025-11-10 12:38:21] Guerreiro gained 0 EXP (Total: 88)
+[2025-11-10 12:38:21] AI94 gained 50% bonus EXP (no damage taken)
+[2025-11-10 12:38:21] AI94 gained 9 EXP (Total: 48)
+[2025-11-10 12:38:21] ATTACK: Guerreiro -> AI94 | Damage: 0 | AI94 HP: 77/100
+[2025-11-10 12:38:21] AI turn: AI12
+[2025-11-10 12:38:22] AI12 gained 0 EXP (Total: 9)
+[2025-11-10 12:38:22] Guerreiro gained 50% bonus EXP (no damage taken)
+[2025-11-10 12:38:22] Guerreiro gained 15 EXP (Total: 103)
+[2025-11-10 12:38:22] LEVEL UP! Guerreiro is now Rank 2!
+[2025-11-10 12:38:22] ATTACK: AI12 -> Guerreiro | Damage: 0 | Guerreiro HP: 93/100
+[2025-11-10 12:38:22] Player turn: Tanque
+[2025-11-10 12:38:22] Tanque gained 0 EXP (Total: 19)
+[2025-11-10 12:38:22] AI94 gained 50% bonus EXP (no damage taken)
+[2025-11-10 12:38:22] AI94 gained 9 EXP (Total: 57)
+[2025-11-10 12:38:22] ATTACK: Tanque -> AI94 | Damage: 0 | AI94 HP: 77/100
+[2025-11-10 12:38:23] AI turn: AI94
+[2025-11-10 12:38:23] AI94 gained 0 EXP (Total: 57)
+[2025-11-10 12:38:23] Guerreiro gained 50% bonus EXP (no damage taken)
+[2025-11-10 12:38:23] Guerreiro gained 15 EXP (Total: 18)
+[2025-11-10 12:38:23] ATTACK: AI94 -> Guerreiro | Damage: 0 | Guerreiro HP: 93/100
+[2025-11-10 12:38:23] Player turn: Arqueiro
+[2025-11-10 12:38:23] Arqueiro gained 0 EXP (Total: 1)
+[2025-11-10 12:38:23] AI94 gained 50% bonus EXP (no damage taken)
+[2025-11-10 12:38:23] AI94 gained 9 EXP (Total: 66)
+[2025-11-10 12:38:23] ATTACK: Arqueiro -> AI94 | Damage: 0 | AI94 HP: 77/100
+[2025-11-10 12:38:24] AI turn: AI58
+[2025-11-10 12:38:24] AI58 gained 0 EXP (Total: 0)
+[2025-11-10 12:38:24] Guerreiro gained 50% bonus EXP (no damage taken)
+[2025-11-10 12:38:24] Guerreiro gained 15 EXP (Total: 33)
+[2025-11-10 12:38:24] ATTACK: AI58 -> Guerreiro | Damage: 0 | Guerreiro HP: 93/100
+[2025-11-10 12:38:25] Player turn: Guerreiro
+[2025-11-10 12:38:25] Guerreiro gained 0 EXP (Total: 33)
+[2025-11-10 12:38:25] AI94 gained 50% bonus EXP (no damage taken)
+[2025-11-10 12:38:25] AI94 gained 9 EXP (Total: 75)
+[2025-11-10 12:38:25] ATTACK: Guerreiro -> AI94 | Damage: 0 | AI94 HP: 77/100
+[2025-11-10 12:38:25] AI turn: AI12
+[2025-11-10 12:38:25] AI12 gained 3 EXP (Total: 12)
+[2025-11-10 12:38:25] Guerreiro gained 10 EXP (Total: 43)
+[2025-11-10 12:38:25] ATTACK: AI12 -> Guerreiro | Damage: 3 | Guerreiro HP: 90/100
+[2025-11-10 12:38:26] Player turn: Tanque
+[2025-11-10 12:38:26] Tanque gained 2 EXP (Total: 21)
+[2025-11-10 12:38:26] AI94 gained 6 EXP (Total: 81)
+[2025-11-10 12:38:26] ATTACK: Tanque -> AI94 | Damage: 2 | AI94 HP: 75/100
+[2025-11-10 12:38:26] AI turn: AI94
+[2025-11-10 12:38:27] AI94 gained 0 EXP (Total: 81)
+[2025-11-10 12:38:27] Guerreiro gained 50% bonus EXP (no damage taken)
+[2025-11-10 12:38:27] Guerreiro gained 15 EXP (Total: 58)
+[2025-11-10 12:38:27] ATTACK: AI94 -> Guerreiro | Damage: 0 | Guerreiro HP: 90/100
+[2025-11-10 12:38:27] Player turn: Arqueiro
+[2025-11-10 12:38:27] Arqueiro gained 11 EXP (Total: 12)
+[2025-11-10 12:38:27] AI94 gained 20% bonus EXP (damage > 10)
+[2025-11-10 12:38:27] AI94 gained 7 EXP (Total: 88)
+[2025-11-10 12:38:27] ATTACK: Arqueiro -> AI94 | Damage: 11 | AI94 HP: 64/100
+[2025-11-10 12:38:27] AI turn: AI58
+[2025-11-10 12:38:28] AI58 gained 0 EXP (Total: 0)
+[2025-11-10 12:38:28] Guerreiro gained 50% bonus EXP (no damage taken)
+[2025-11-10 12:38:28] Guerreiro gained 15 EXP (Total: 73)
+[2025-11-10 12:38:28] ATTACK: AI58 -> Guerreiro | Damage: 0 | Guerreiro HP: 90/100
+[2025-11-10 12:38:28] Player turn: Guerreiro
+[2025-11-10 12:38:28] Guerreiro gained 0 EXP (Total: 73)
+[2025-11-10 12:38:28] AI94 gained 50% bonus EXP (no damage taken)
+[2025-11-10 12:38:28] AI94 gained 9 EXP (Total: 97)
+[2025-11-10 12:38:28] ATTACK: Guerreiro -> AI94 | Damage: 0 | AI94 HP: 64/100
+[2025-11-10 12:38:29] AI turn: AI12
+[2025-11-10 12:38:29] AI12 gained 0 EXP (Total: 12)
+[2025-11-10 12:38:29] Guerreiro gained 50% bonus EXP (no damage taken)
+[2025-11-10 12:38:29] Guerreiro gained 15 EXP (Total: 88)
+[2025-11-10 12:38:29] ATTACK: AI12 -> Guerreiro | Damage: 0 | Guerreiro HP: 90/100
+[2025-11-10 12:38:29] Player turn: Tanque
+[2025-11-10 12:38:29] Tanque gained 2 EXP (Total: 23)
+[2025-11-10 12:38:29] AI94 gained 6 EXP (Total: 103)
+[2025-11-10 12:38:29] LEVEL UP! AI94 is now Rank 2!
+[2025-11-10 12:38:29] ATTACK: Tanque -> AI94 | Damage: 2 | AI94 HP: 62/100
+[2025-11-10 12:38:30] AI turn: AI94
+[2025-11-10 12:38:30] AI94 gained 0 EXP (Total: 3)
+[2025-11-10 12:38:30] Guerreiro gained 50% bonus EXP (no damage taken)
+[2025-11-10 12:38:30] Guerreiro gained 15 EXP (Total: 103)
+[2025-11-10 12:38:30] LEVEL UP! Guerreiro is now Rank 3!
+[2025-11-10 12:38:30] ATTACK: AI94 -> Guerreiro | Damage: 0 | Guerreiro HP: 90/100
+[2025-11-10 12:38:31] Player turn: Arqueiro
+[2025-11-10 12:38:31] Arqueiro gained 3 EXP (Total: 15)
+[2025-11-10 12:38:31] AI94 gained 6 EXP (Total: 9)
+[2025-11-10 12:38:31] ATTACK: Arqueiro -> AI94 | Damage: 3 | AI94 HP: 59/100
+[2025-11-10 12:38:31] AI turn: AI58
+[2025-11-10 12:38:31] AI58 gained 0 EXP (Total: 0)
+[2025-11-10 12:38:31] Guerreiro gained 50% bonus EXP (no damage taken)
+[2025-11-10 12:38:31] Guerreiro gained 15 EXP (Total: 18)
+[2025-11-10 12:38:31] ATTACK: AI58 -> Guerreiro | Damage: 0 | Guerreiro HP: 90/100
+[2025-11-10 12:38:32] Player turn: Guerreiro
+[2025-11-10 12:38:32] Guerreiro gained 6 EXP (Total: 24)
+[2025-11-10 12:38:32] AI94 gained 6 EXP (Total: 15)
+[2025-11-10 12:38:32] ATTACK: Guerreiro -> AI94 | Damage: 6 | AI94 HP: 53/100
+[2025-11-10 12:38:32] AI turn: AI12
+[2025-11-10 12:38:33] AI12 gained 0 EXP (Total: 12)
+[2025-11-10 12:38:33] Guerreiro gained 50% bonus EXP (no damage taken)
+[2025-11-10 12:38:33] Guerreiro gained 15 EXP (Total: 39)
+[2025-11-10 12:38:33] ATTACK: AI12 -> Guerreiro | Damage: 0 | Guerreiro HP: 90/100
+[2025-11-10 12:38:33] Player turn: Tanque
+[2025-11-10 12:38:33] Tanque gained 12 EXP (Total: 35)
+[2025-11-10 12:38:33] AI94 gained 20% bonus EXP (damage > 10)
+[2025-11-10 12:38:33] AI94 gained 7 EXP (Total: 22)
+[2025-11-10 12:38:33] ATTACK: Tanque -> AI94 | Damage: 12 | AI94 HP: 41/100
+[2025-11-10 12:38:33] AI turn: AI94
+[2025-11-10 12:38:34] AI94 gained 0 EXP (Total: 22)
+[2025-11-10 12:38:34] Guerreiro gained 50% bonus EXP (no damage taken)
+[2025-11-10 12:38:34] Guerreiro gained 15 EXP (Total: 54)
+[2025-11-10 12:38:34] ATTACK: AI94 -> Guerreiro | Damage: 0 | Guerreiro HP: 90/100
+[2025-11-10 12:38:34] Player turn: Arqueiro
+[2025-11-10 12:38:34] Arqueiro gained 13 EXP (Total: 28)
+[2025-11-10 12:38:34] AI94 gained 20% bonus EXP (damage > 10)
+[2025-11-10 12:38:34] AI94 gained 7 EXP (Total: 29)
+[2025-11-10 12:38:34] ATTACK: Arqueiro -> AI94 | Damage: 13 | AI94 HP: 28/100
+[2025-11-10 12:38:35] AI turn: AI58
+[2025-11-10 12:38:35] AI58 gained 0 EXP (Total: 0)
+[2025-11-10 12:38:35] Guerreiro gained 50% bonus EXP (no damage taken)
+[2025-11-10 12:38:35] Guerreiro gained 15 EXP (Total: 69)
+[2025-11-10 12:38:35] ATTACK: AI58 -> Guerreiro | Damage: 0 | Guerreiro HP: 90/100
+[2025-11-10 12:38:36] Player turn: Guerreiro
+[2025-11-10 12:38:36] Guerreiro gained 0 EXP (Total: 69)
+[2025-11-10 12:38:36] AI94 gained 50% bonus EXP (no damage taken)
+[2025-11-10 12:38:36] AI94 gained 9 EXP (Total: 38)
+[2025-11-10 12:38:36] ATTACK: Guerreiro -> AI94 | Damage: 0 | AI94 HP: 28/100
+[2025-11-10 12:38:36] AI turn: AI12
+[2025-11-10 12:38:36] AI12 gained 0 EXP (Total: 12)
+[2025-11-10 12:38:36] Guerreiro gained 50% bonus EXP (no damage taken)
+[2025-11-10 12:38:36] Guerreiro gained 15 EXP (Total: 84)
+[2025-11-10 12:38:36] ATTACK: AI12 -> Guerreiro | Damage: 0 | Guerreiro HP: 90/100
+[2025-11-10 12:38:37] Player turn: Tanque
+[2025-11-10 12:38:37] Tanque gained 4 EXP (Total: 39)
+[2025-11-10 12:38:37] AI94 gained 6 EXP (Total: 44)
+[2025-11-10 12:38:37] ATTACK: Tanque -> AI94 | Damage: 4 | AI94 HP: 24/100
+[2025-11-10 12:38:37] AI turn: AI94
+[2025-11-10 12:38:38] AI94 gained 0 EXP (Total: 44)
+[2025-11-10 12:38:38] Guerreiro gained 50% bonus EXP (no damage taken)
+[2025-11-10 12:38:38] Guerreiro gained 15 EXP (Total: 99)
+[2025-11-10 12:38:38] ATTACK: AI94 -> Guerreiro | Damage: 0 | Guerreiro HP: 90/100
+[2025-11-10 12:38:38] Player turn: Arqueiro
+[2025-11-10 12:38:38] Arqueiro gained 13 EXP (Total: 41)
+[2025-11-10 12:38:38] AI94 gained 20% bonus EXP (damage > 10)
+[2025-11-10 12:38:38] AI94 gained 7 EXP (Total: 51)
+[2025-11-10 12:38:38] ATTACK: Arqueiro -> AI94 | Damage: 13 | AI94 HP: 11/100
+[2025-11-10 12:38:38] AI turn: AI58
+[2025-11-10 12:38:39] AI58 gained 0 EXP (Total: 0)
+[2025-11-10 12:38:39] Guerreiro gained 50% bonus EXP (no damage taken)
+[2025-11-10 12:38:39] Guerreiro gained 15 EXP (Total: 114)
+[2025-11-10 12:38:39] LEVEL UP! Guerreiro is now Rank 4!
+[2025-11-10 12:38:39] ATTACK: AI58 -> Guerreiro | Damage: 0 | Guerreiro HP: 90/100
+[2025-11-10 12:38:39] Player turn: Guerreiro
+[2025-11-10 12:38:39] Guerreiro gained 1 EXP (Total: 15)
+[2025-11-10 12:38:39] AI94 gained 6 EXP (Total: 57)
+[2025-11-10 12:38:39] ATTACK: Guerreiro -> AI94 | Damage: 1 | AI94 HP: 10/100
+[2025-11-10 12:38:40] AI turn: AI12
+[2025-11-10 12:38:40] AI12 gained 0 EXP (Total: 12)
+[2025-11-10 12:38:40] Guerreiro gained 50% bonus EXP (no damage taken)
+[2025-11-10 12:38:40] Guerreiro gained 15 EXP (Total: 30)
+[2025-11-10 12:38:40] ATTACK: AI12 -> Guerreiro | Damage: 0 | Guerreiro HP: 90/100
+[2025-11-10 12:38:40] Player turn: Tanque
+[2025-11-10 12:38:40] Tanque gained 13 EXP (Total: 52)
+[2025-11-10 12:38:40] AI94 gained 20% bonus EXP (damage > 10)
+[2025-11-10 12:38:40] AI94 gained 7 EXP (Total: 64)
+[2025-11-10 12:38:40] ATTACK: Tanque -> AI94 | Damage: 13 | AI94 HP: 0/100
+[2025-11-10 12:38:40] AI94 has been defeated!
+[2025-11-10 12:38:41] Player turn: Arqueiro
