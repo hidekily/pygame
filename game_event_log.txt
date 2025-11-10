@@ -1,25 +1,61 @@
 === TURN-BASED BATTLE GAME - EVENT LOG ===
 
-[2025-11-10 13:10:48] Game Started
-[2025-11-10 13:10:49] Entered selection
-[2025-11-10 13:10:50] Unit created: Archer (Warrior) - HP:100 ATK:11 DEF:2
-[2025-11-10 13:10:50] Selected: Archer (Warrior)
-[2025-11-10 13:10:51] Unit created: Warrior (Warrior) - HP:100 ATK:9 DEF:1
-[2025-11-10 13:10:51] Selected: Warrior (Warrior)
-[2025-11-10 13:10:52] Unit created: Tank (Tanker) - HP:100 ATK:10 DEF:15
-[2025-11-10 13:10:52] Selected: Tank (Tanker)
-[2025-11-10 13:10:52] AI Team Setup
-[2025-11-10 13:10:52] Unit created: AI88 (Tanker) - HP:100 ATK:9 DEF:5
-[2025-11-10 13:10:52] Unit created: AI29 (Tanker) - HP:100 ATK:1 DEF:10
-[2025-11-10 13:10:52] Unit created: AI67 (Warrior) - HP:100 ATK:14 DEF:8
-[2025-11-10 13:10:52] Turn order: P1,AI1,P2,AI2,P3,AI3
-[2025-11-10 13:10:52] Battle Started!
-[2025-11-10 13:10:52] Player turn: Archer
-[2025-11-10 13:10:53] Archer +2 EXP (Total: 2)
-[2025-11-10 13:10:53] AI88 +5 EXP (Total: 5)
-[2025-11-10 13:10:53] ATTACK: Archer -> AI88 | Dmg: 2 | AI88 HP: 98/100
-[2025-11-10 13:10:54] AI turn: AI88
-[2025-11-10 13:10:54] AI88 +2 EXP (Total: 7)
-[2025-11-10 13:10:54] Archer +2 EXP (Total: 4)
-[2025-11-10 13:10:54] ATTACK: AI88 -> Archer | Dmg: 2 | Archer HP: 98/100
-[2025-11-10 13:10:54] Player turn: Warrior
+[2025-11-10 14:30:01] Game Started
+[2025-11-10 14:30:02] Entered selection
+[2025-11-10 14:30:04] Unit created: Assassin (Warrior) - HP:100 ATK:14 DEF:5
+[2025-11-10 14:30:04] Selected: Assassin (Warrior)
+[2025-11-10 14:30:06] Unit created: Archer (Warrior) - HP:100 ATK:6 DEF:1
+[2025-11-10 14:30:06] Selected: Archer (Warrior)
+[2025-11-10 14:30:07] Unit created: Warrior (Warrior) - HP:100 ATK:9 DEF:8
+[2025-11-10 14:30:07] Selected: Warrior (Warrior)
+[2025-11-10 14:30:09] AI Team Setup
+[2025-11-10 14:30:09] Unit created: IA1 (Tank) - HP:100 ATK:2 DEF:14
+[2025-11-10 14:30:09] Unit created: IA2 (Tank) - HP:100 ATK:9 DEF:15
+[2025-11-10 14:30:09] Unit created: IA3 (Warrior) - HP:100 ATK:11 DEF:1
+[2025-11-10 14:30:09] Turn order: P1,AI1,P2,AI2,P3,AI3
+[2025-11-10 14:30:09] Battle Started!
+[2025-11-10 14:30:09] Player turn: Assassin
+[2025-11-10 14:30:12] Assassin +5 EXP (Total: 5)
+[2025-11-10 14:30:12] IA1 +14 EXP (Total: 14)
+[2025-11-10 14:30:12] ATTACK: Assassin -> IA1 | Dmg: 5 | IA1 HP: 95/100
+[2025-11-10 14:30:13] AI turn: IA1
+[2025-11-10 14:30:13] IA1 +4 EXP (Total: 18)
+[2025-11-10 14:30:13] Assassin +5 EXP (Total: 10)
+[2025-11-10 14:30:13] ATTACK: IA1 -> Assassin | Dmg: 4 | Assassin HP: 96/100
+[2025-11-10 14:30:14] Player turn: Archer
+[2025-11-10 14:30:14] Archer +0 EXP (Total: 0)
+[2025-11-10 14:30:14] IA2 +50% bonus EXP (no dmg)
+[2025-11-10 14:30:14] IA2 +22 EXP (Total: 22)
+[2025-11-10 14:30:14] ATTACK: Archer -> IA2 | Dmg: 0 | IA2 HP: 100/100
+[2025-11-10 14:30:14] AI turn: IA2
+[2025-11-10 14:30:15] IA2 +6 EXP (Total: 28)
+[2025-11-10 14:30:15] Assassin +5 EXP (Total: 15)
+[2025-11-10 14:30:15] ATTACK: IA2 -> Assassin | Dmg: 6 | Assassin HP: 90/100
+[2025-11-10 14:30:15] Player turn: Warrior
+[2025-11-10 14:30:16] Warrior +13 EXP (Total: 13)
+[2025-11-10 14:30:16] IA3 +20% bonus EXP (dmg > 10)
+[2025-11-10 14:30:16] IA3 +1 EXP (Total: 1)
+[2025-11-10 14:30:16] ATTACK: Warrior -> IA3 | Dmg: 13 | IA3 HP: 87/100
+[2025-11-10 14:30:17] AI turn: IA3
+[2025-11-10 14:30:17] IA3 +3 EXP (Total: 4)
+[2025-11-10 14:30:17] Assassin +5 EXP (Total: 20)
+[2025-11-10 14:30:17] ATTACK: IA3 -> Assassin | Dmg: 3 | Assassin HP: 87/100
+[2025-11-10 14:30:18] Player turn: Assassin
+[2025-11-10 14:30:19] Assassin +0 EXP (Total: 20)
+[2025-11-10 14:30:19] IA2 +50% bonus EXP (no dmg)
+[2025-11-10 14:30:19] IA2 +22 EXP (Total: 50)
+[2025-11-10 14:30:19] ATTACK: Assassin -> IA2 | Dmg: 0 | IA2 HP: 100/100
+[2025-11-10 14:30:19] AI turn: IA1
+[2025-11-10 14:30:20] IA1 +5 EXP (Total: 23)
+[2025-11-10 14:30:20] Assassin +5 EXP (Total: 25)
+[2025-11-10 14:30:20] ATTACK: IA1 -> Assassin | Dmg: 5 | Assassin HP: 82/100
+[2025-11-10 14:30:20] Player turn: Archer
+[2025-11-10 14:30:22] Archer +0 EXP (Total: 0)
+[2025-11-10 14:30:22] IA2 +50% bonus EXP (no dmg)
+[2025-11-10 14:30:22] IA2 +22 EXP (Total: 72)
+[2025-11-10 14:30:22] ATTACK: Archer -> IA2 | Dmg: 0 | IA2 HP: 100/100
+[2025-11-10 14:30:22] AI turn: IA2
+[2025-11-10 14:30:22] IA2 +5 EXP (Total: 77)
+[2025-11-10 14:30:22] Assassin +5 EXP (Total: 30)
+[2025-11-10 14:30:22] ATTACK: IA2 -> Assassin | Dmg: 5 | Assassin HP: 77/100
+[2025-11-10 14:30:23] Player turn: Warrior
