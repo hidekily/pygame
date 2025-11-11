@@ -8,6 +8,7 @@ class Unit:
     def __init__(self, name, prof, sprite_path=None):
         self.name, self.prof, self.rank, self.exp = name, prof, 1, 0
         self.hp_max = self.hp = 100
+        self.coins = 0  # TC-21: Coin system
         
         if prof == "Warrior":
             self.atk, self.defense = random.randint(5, 20), random.randint(1, 10)
@@ -28,9 +29,16 @@ class Unit:
         log(f"Unit created: {name} ({prof}) - HP:{self.hp} ATK:{self.atk} DEF:{self.defense}")
     
     def attack(self, target):
+        """Attacks another unit"""
         dmg = max(0, self.atk - target.defense + random.randint(-5, 10))
         target.hp = max(0, target.hp - dmg)
         target.alive = target.hp > 0
+        
+        # TC-21: Earn coins from damage (damage ÷ 2)
+        coins_earned = dmg // 2
+        self.coins += coins_earned
+        if coins_earned > 0:
+            log(f"{self.name} earned {coins_earned} coins! (Total: {self.coins})")
         
         self.gain_exp(dmg)
         target_exp = target.defense
@@ -53,14 +61,30 @@ class Unit:
         return dmg
     
     def gain_exp(self, exp):
+        """Gains experience"""
         self.exp += exp
         log(f"{self.name} +{exp} EXP (Total: {self.exp})")
-        if self.exp >= 100:
+        
+        # Handle multiple level ups (TC-52)
+        while self.exp >= 100:
             self.rank += 1
             self.exp -= 100
+            
+            # TC-16: Level Up Stats - ATK +2, DEF +1, MaxHP +10, HP +20
+            self.atk += 2
+            self.defense += 1
+            self.hp_max += 10
+            self.hp = min(self.hp + 20, self.hp_max)  # TC-53: Cap at max HP
+            
+            # TC-39: Level up sound
+            from utils import play_sfx
+            play_sfx('levelup')
+            
             log(f"LEVEL UP! {self.name} -> Rank {self.rank}!")
+            log(f"Stats: ATK:{self.atk} DEF:{self.defense} MaxHP:{self.hp_max}")
     
     def draw(self, screen, x, y, show_hover=False, is_turn=False):
+        """Draws the unit on screen"""
         if pygame.time.get_ticks() - self.effect_time > 300:
             self.attacking = self.attacked = False
         
@@ -113,10 +137,40 @@ class Unit:
         stats = [
             f"Health: {self.hp}/{self.hp_max}",
             f"Attack: {self.atk} | Defense: {self.defense}",
-            f"Experience: {self.exp}/100"
+            f"Experience: {self.exp}/100",
+            f"💰 Coins: {self.coins}"  # TC-22: Display coins
         ]
         for i, stat in enumerate(stats):
-            stat_text = f_stats.render(stat, True, WHITE)
+            stat_text = f_stats.render(stat, True, WHITE if i < 3 else YELLOW)
             screen.blit(stat_text, (x + sprite_size//2 - stat_text.get_width()//2, stats_y + i*18))
         
         return rect
+    
+    def to_dict(self):
+        """Serialize unit to dictionary for saving"""
+        return {
+            'name': self.name,
+            'prof': self.prof,
+            'rank': self.rank,
+            'exp': self.exp,
+            'hp': self.hp,
+            'hp_max': self.hp_max,
+            'atk': self.atk,
+            'defense': self.defense,
+            'coins': self.coins,
+            'alive': self.alive
+        }
+    
+    @staticmethod
+    def from_dict(data, sprite_path=None):
+        """Deserialize unit from dictionary"""
+        unit = Unit(data['name'], data['prof'], sprite_path)
+        unit.rank = data['rank']
+        unit.exp = data['exp']
+        unit.hp = data['hp']
+        unit.hp_max = data['hp_max']
+        unit.atk = data['atk']
+        unit.defense = data['defense']
+        unit.coins = data['coins']
+        unit.alive = data['alive']
+        return unit

@@ -1,7 +1,7 @@
 import pygame
 import os
 from config import SCREEN_WIDTH, BLACK, GREEN, DARK_GRAY, YELLOW, base_chars
-from utils import btn, log
+from utils import btn, log, play_sfx
 from unit import Unit
 
 def draw(screen, player_team, selected, m_pos):
@@ -82,6 +82,10 @@ def handle_click(pos, player_team, selected):
                 selected[i] = True
                 prof, name, spr = base_chars[i]
                 player_team.append(Unit(name, prof, spr))
+                
+                # TC-42: Character select sound
+                play_sfx('select')
+                
                 log(f"Selected: {name} ({prof})")
     
     return None
