@@ -1,137 +1,450 @@
 === TURN-BASED BATTLE GAME - EVENT LOG ===
 
-[2025-11-11 19:50:30] Error playing music: No file './sounds/menu.mp3' found in working directory 'C:\Users\dkura\OneDrive\Área de Trabalho\trabalho escola\pygame\codeblocks'.
-[2025-11-11 19:50:30] Game Started
-[2025-11-11 19:50:31] Entered selection
-[2025-11-11 19:50:31] Error playing music: No file './sounds/selection.mp3' found in working directory 'C:\Users\dkura\OneDrive\Área de Trabalho\trabalho escola\pygame\codeblocks'.
-[2025-11-11 19:50:31] Unit created: Warrior (Warrior) - HP:100 ATK:20 DEF:6
-[2025-11-11 19:50:31] Selected: Warrior (Warrior)
-[2025-11-11 19:50:32] Unit created: Tank (Tank) - HP:100 ATK:2 DEF:15
-[2025-11-11 19:50:32] Selected: Tank (Tank)
-[2025-11-11 19:50:32] Unit created: Archer (Warrior) - HP:100 ATK:11 DEF:3
-[2025-11-11 19:50:32] Selected: Archer (Warrior)
-[2025-11-11 19:50:33] AI Team Setup
-[2025-11-11 19:50:33] Unit created: IA1 (Tank) - HP:100 ATK:4 DEF:7
-[2025-11-11 19:50:33] Unit created: IA2 (Warrior) - HP:100 ATK:10 DEF:3
-[2025-11-11 19:50:33] Unit created: IA3 (Warrior) - HP:100 ATK:11 DEF:8
-[2025-11-11 19:50:33] Turn order created with 3 players and 3 AI
-[2025-11-11 19:50:33] Battle Started!
-[2025-11-11 19:50:33] Error playing music: No file './sounds/battle.mp3' found in working directory 'C:\Users\dkura\OneDrive\Área de Trabalho\trabalho escola\pygame\codeblocks'.
-[2025-11-11 19:50:33] Player turn: Warrior
-[2025-11-11 19:50:38] 💥 CRITICAL HIT! +6 bonus coins
-[2025-11-11 19:50:38] Warrior earned 22 coins! (Total: 22)
-[2025-11-11 19:50:38] Warrior +21 EXP (Total: 21)
-[2025-11-11 19:50:38] IA1 +20% bonus EXP (dmg > 10)
-[2025-11-11 19:50:38] IA1 +8 EXP (Total: 8)
-[2025-11-11 19:50:38] ATTACK: Warrior -> IA1 | Dmg: 21 | IA1 HP: 79/100
-[2025-11-11 19:50:39] AI turn: IA1
-[2025-11-11 19:50:39] IA1 earned 2 coins! (Total: 2)
-[2025-11-11 19:50:39] IA1 +3 EXP (Total: 11)
-[2025-11-11 19:50:39] Warrior +6 EXP (Total: 27)
-[2025-11-11 19:50:39] ATTACK: IA1 -> Warrior | Dmg: 3 | Warrior HP: 97/100
-[2025-11-11 19:50:40] Player turn: Tank
-[2025-11-11 19:50:41] Tank earned 2 coins! (Total: 2)
-[2025-11-11 19:50:41] Tank +3 EXP (Total: 3)
-[2025-11-11 19:50:41] IA1 +7 EXP (Total: 18)
-[2025-11-11 19:50:41] ATTACK: Tank -> IA1 | Dmg: 3 | IA1 HP: 76/100
-[2025-11-11 19:50:41] AI turn: IA2
-[2025-11-11 19:50:41] IA2 earned 7 coins! (Total: 7)
-[2025-11-11 19:50:41] IA2 +9 EXP (Total: 9)
-[2025-11-11 19:50:41] Warrior +6 EXP (Total: 33)
-[2025-11-11 19:50:41] ATTACK: IA2 -> Warrior | Dmg: 9 | Warrior HP: 88/100
-[2025-11-11 19:50:42] Player turn: Archer
-[2025-11-11 19:50:42] Archer earned 6 coins! (Total: 6)
-[2025-11-11 19:50:42] Archer +8 EXP (Total: 8)
-[2025-11-11 19:50:42] IA1 +7 EXP (Total: 25)
-[2025-11-11 19:50:42] ATTACK: Archer -> IA1 | Dmg: 8 | IA1 HP: 68/100
-[2025-11-11 19:50:43] AI turn: IA3
-[2025-11-11 19:50:43] IA3 earned 7 coins! (Total: 7)
-[2025-11-11 19:50:43] IA3 +9 EXP (Total: 9)
-[2025-11-11 19:50:43] Warrior +6 EXP (Total: 39)
-[2025-11-11 19:50:43] ATTACK: IA3 -> Warrior | Dmg: 9 | Warrior HP: 79/100
-[2025-11-11 19:50:44] Player turn: Warrior
-[2025-11-11 19:50:47] Healing Potion used on Warrior: +21 HP
-[2025-11-11 19:50:48] 💥 CRITICAL HIT! +7 bonus coins
-[2025-11-11 19:50:48] Warrior earned 23 coins! (Total: 23)
-[2025-11-11 19:50:48] Warrior +21 EXP (Total: 60)
-[2025-11-11 19:50:48] IA1 +20% bonus EXP (dmg > 10)
-[2025-11-11 19:50:48] IA1 +8 EXP (Total: 33)
-[2025-11-11 19:50:48] ATTACK: Warrior -> IA1 | Dmg: 21 | IA1 HP: 47/100
-[2025-11-11 19:50:49] AI turn: IA1
-[2025-11-11 19:50:49] IA1 earned 2 coins! (Total: 4)
-[2025-11-11 19:50:49] IA1 +3 EXP (Total: 36)
-[2025-11-11 19:50:49] Warrior +6 EXP (Total: 66)
-[2025-11-11 19:50:49] ATTACK: IA1 -> Warrior | Dmg: 3 | Warrior HP: 97/100
-[2025-11-11 19:50:50] Player turn: Tank
-[2025-11-11 19:50:51] Tank earned 2 coins! (Total: 2)
-[2025-11-11 19:50:51] Tank +3 EXP (Total: 6)
-[2025-11-11 19:50:51] IA1 +7 EXP (Total: 43)
-[2025-11-11 19:50:51] ATTACK: Tank -> IA1 | Dmg: 3 | IA1 HP: 44/100
-[2025-11-11 19:50:51] AI turn: IA2
-[2025-11-11 19:50:52] IA2 earned 8 coins! (Total: 15)
-[2025-11-11 19:50:52] IA2 +10 EXP (Total: 19)
-[2025-11-11 19:50:52] Warrior +6 EXP (Total: 72)
-[2025-11-11 19:50:52] ATTACK: IA2 -> Warrior | Dmg: 10 | Warrior HP: 87/100
-[2025-11-11 19:50:52] Player turn: Archer
-[2025-11-11 19:50:54] Archer earned 6 coins! (Total: 6)
-[2025-11-11 19:50:54] Archer +8 EXP (Total: 16)
-[2025-11-11 19:50:54] IA1 +7 EXP (Total: 50)
-[2025-11-11 19:50:54] ATTACK: Archer -> IA1 | Dmg: 8 | IA1 HP: 36/100
-[2025-11-11 19:50:54] AI turn: IA3
-[2025-11-11 19:50:54] IA3 earned 8 coins! (Total: 15)
-[2025-11-11 19:50:54] IA3 +10 EXP (Total: 19)
-[2025-11-11 19:50:54] Warrior +6 EXP (Total: 78)
-[2025-11-11 19:50:54] ATTACK: IA3 -> Warrior | Dmg: 10 | Warrior HP: 77/100
-[2025-11-11 19:50:55] Player turn: Warrior
-[2025-11-11 19:50:57] 💥 CRITICAL HIT! +7 bonus coins
-[2025-11-11 19:50:57] Warrior earned 25 coins! (Total: 48)
-[2025-11-11 19:50:57] Warrior +23 EXP (Total: 101)
-[2025-11-11 19:50:57] LEVEL UP! Warrior -> Rank 2!
-[2025-11-11 19:50:57] Stats: ATK:22 DEF:7 MaxHP:110
-[2025-11-11 19:50:57] IA1 +20% bonus EXP (dmg > 10)
-[2025-11-11 19:50:57] IA1 +8 EXP (Total: 58)
-[2025-11-11 19:50:57] ATTACK: Warrior -> IA1 | Dmg: 23 | IA1 HP: 13/100
-[2025-11-11 19:50:58] AI turn: IA1
-[2025-11-11 19:50:58] IA1 earned 2 coins! (Total: 6)
-[2025-11-11 19:50:58] IA1 +3 EXP (Total: 61)
-[2025-11-11 19:50:58] Warrior +7 EXP (Total: 8)
-[2025-11-11 19:50:58] ATTACK: IA1 -> Warrior | Dmg: 3 | Warrior HP: 94/110
-[2025-11-11 19:50:58] Player turn: Tank
-[2025-11-11 19:51:03] Unit created: Recruit4 (Tank) - HP:100 ATK:1 DEF:6
-[2025-11-11 19:51:03] Unit recruited and joined battle: Recruit4 (Tank)
-[2025-11-11 19:51:07] Tank earned 2 coins! (Total: 4)
-[2025-11-11 19:51:07] Tank +3 EXP (Total: 9)
-[2025-11-11 19:51:07] IA1 +7 EXP (Total: 68)
-[2025-11-11 19:51:07] ATTACK: Tank -> IA1 | Dmg: 3 | IA1 HP: 10/100
-[2025-11-11 19:51:07] AI turn: IA2
-[2025-11-11 19:51:07] IA2 earned 8 coins! (Total: 23)
-[2025-11-11 19:51:07] IA2 +10 EXP (Total: 29)
-[2025-11-11 19:51:07] Warrior +7 EXP (Total: 15)
-[2025-11-11 19:51:07] ATTACK: IA2 -> Warrior | Dmg: 10 | Warrior HP: 84/110
-[2025-11-11 19:51:08] Player turn: Archer
-[2025-11-11 19:51:10] Archer earned 7 coins! (Total: 11)
-[2025-11-11 19:51:10] Archer +9 EXP (Total: 25)
-[2025-11-11 19:51:10] IA1 +7 EXP (Total: 75)
-[2025-11-11 19:51:10] ATTACK: Archer -> IA1 | Dmg: 9 | IA1 HP: 1/100
-[2025-11-11 19:51:10] AI turn: IA3
-[2025-11-11 19:51:11] IA3 earned 6 coins! (Total: 21)
-[2025-11-11 19:51:11] IA3 +8 EXP (Total: 27)
-[2025-11-11 19:51:11] Warrior +7 EXP (Total: 22)
-[2025-11-11 19:51:11] ATTACK: IA3 -> Warrior | Dmg: 8 | Warrior HP: 76/110
-[2025-11-11 19:51:11] Player turn: Recruit4
-[2025-11-11 19:51:13] 💀 IA1 DEFEATED! +28 coins bonus!
-[2025-11-11 19:51:13] Recruit4 earned 30 coins! (Total: 30)
-[2025-11-11 19:51:13] Recruit4 +3 EXP (Total: 3)
-[2025-11-11 19:51:13] IA1 +7 EXP (Total: 82)
-[2025-11-11 19:51:13] ATTACK: Recruit4 -> IA1 | Dmg: 3 | IA1 HP: 0/100
-[2025-11-11 19:51:13] IA1 defeated!
-[2025-11-11 19:51:13] Player turn: Warrior
-[2025-11-11 19:51:15] 💥 CRITICAL HIT! +6 bonus coins
-[2025-11-11 19:51:15] Warrior earned 29 coins! (Total: 29)
-[2025-11-11 19:51:15] Warrior +26 EXP (Total: 48)
-[2025-11-11 19:51:15] IA2 +20% bonus EXP (dmg > 10)
-[2025-11-11 19:51:15] IA2 +3 EXP (Total: 32)
-[2025-11-11 19:51:15] ATTACK: Warrior -> IA2 | Dmg: 26 | IA2 HP: 74/100
-[2025-11-11 19:51:15] Player turn: Tank
-[2025-11-11 19:51:16] Unit created: Recruit5 (Tank) - HP:100 ATK:8 DEF:15
-[2025-11-11 19:51:16] Unit recruited and joined battle: Recruit5 (Tank)
+[2025-11-11 22:34:31] Error playing music: No file './sounds/menu.mp3' found in working directory 'C:\Users\dkura\OneDrive\Área de Trabalho\trabalho escola\pygame\codeBlocks'.
+[2025-11-11 22:34:31] Game Started
+[2025-11-11 22:34:32] Entered selection
+[2025-11-11 22:34:32] Error playing music: No file './sounds/selection.mp3' found in working directory 'C:\Users\dkura\OneDrive\Área de Trabalho\trabalho escola\pygame\codeBlocks'.
+[2025-11-11 22:34:34] Unit created: Warrior (Warrior) - HP:100 ATK:13 DEF:2
+[2025-11-11 22:34:34] Selected: Warrior (Warrior)
+[2025-11-11 22:34:34] Unit created: Archer (Warrior) - HP:100 ATK:17 DEF:10
+[2025-11-11 22:34:34] Selected: Archer (Warrior)
+[2025-11-11 22:34:35] Unit created: Assassin (Warrior) - HP:100 ATK:10 DEF:1
+[2025-11-11 22:34:35] Selected: Assassin (Warrior)
+[2025-11-11 22:34:35] AI Team Setup
+[2025-11-11 22:34:35] Unit created: IA1 (Warrior) - HP:100 ATK:17 DEF:5
+[2025-11-11 22:34:35] Unit created: IA2 (Warrior) - HP:100 ATK:6 DEF:4
+[2025-11-11 22:34:35] Unit created: IA3 (Warrior) - HP:100 ATK:12 DEF:5
+[2025-11-11 22:34:35] Turn order created with 3 players and 3 AI
+[2025-11-11 22:34:35] Battle Started!
+[2025-11-11 22:34:35] Error playing music: No file './sounds/battle.mp3' found in working directory 'C:\Users\dkura\OneDrive\Área de Trabalho\trabalho escola\pygame\codeBlocks'.
+[2025-11-11 22:34:35] Player turn: Warrior
+[2025-11-11 22:34:37] Warrior earned 11 coins! (Total: 11)
+[2025-11-11 22:34:37] Warrior +14 EXP (Total: 14)
+[2025-11-11 22:34:37] IA1 +20% bonus EXP (dmg > 10)
+[2025-11-11 22:34:37] IA1 +6 EXP (Total: 6)
+[2025-11-11 22:34:37] ATTACK: Warrior -> IA1 | Dmg: 14 | IA1 HP: 86/100
+[2025-11-11 22:34:37] Warrior +10 EXP (Total: 24)
+[2025-11-11 22:34:37] IA1 +9 EXP (Total: 15)
+[2025-11-11 22:34:37] AI turn: IA1
+[2025-11-11 22:34:37] 💥 CRITICAL HIT! +6 bonus coins
+[2025-11-11 22:34:37] IA1 earned 22 coins! (Total: 22)
+[2025-11-11 22:34:37] IA1 +20 EXP (Total: 35)
+[2025-11-11 22:34:37] Warrior +20% bonus EXP (dmg > 10)
+[2025-11-11 22:34:37] Warrior +2 EXP (Total: 26)
+[2025-11-11 22:34:37] ATTACK: IA1 -> Warrior | Dmg: 20 | Warrior HP: 80/100
+[2025-11-11 22:34:37] IA1 +8 EXP (Total: 43)
+[2025-11-11 22:34:37] Warrior +6 EXP (Total: 32)
+[2025-11-11 22:34:38] Player turn: Archer
+[2025-11-11 22:34:39] 💥 CRITICAL HIT! +5 bonus coins
+[2025-11-11 22:34:39] Archer earned 21 coins! (Total: 21)
+[2025-11-11 22:34:39] Archer +20 EXP (Total: 20)
+[2025-11-11 22:34:39] IA1 +20% bonus EXP (dmg > 10)
+[2025-11-11 22:34:39] IA1 +6 EXP (Total: 49)
+[2025-11-11 22:34:39] ATTACK: Archer -> IA1 | Dmg: 20 | IA1 HP: 66/100
+[2025-11-11 22:34:39] Archer +10 EXP (Total: 30)
+[2025-11-11 22:34:39] IA1 +8 EXP (Total: 57)
+[2025-11-11 22:34:39] AI turn: IA2
+[2025-11-11 22:34:39] IA2 earned 5 coins! (Total: 5)
+[2025-11-11 22:34:39] IA2 +7 EXP (Total: 7)
+[2025-11-11 22:34:39] Warrior +2 EXP (Total: 34)
+[2025-11-11 22:34:39] ATTACK: IA2 -> Warrior | Dmg: 7 | Warrior HP: 73/100
+[2025-11-11 22:34:39] IA2 +8 EXP (Total: 15)
+[2025-11-11 22:34:39] Warrior +8 EXP (Total: 42)
+[2025-11-11 22:34:40] Player turn: Assassin
+[2025-11-11 22:34:40] Assassin earned 6 coins! (Total: 6)
+[2025-11-11 22:34:40] Assassin +8 EXP (Total: 8)
+[2025-11-11 22:34:40] IA1 +5 EXP (Total: 62)
+[2025-11-11 22:34:40] ATTACK: Assassin -> IA1 | Dmg: 8 | IA1 HP: 58/100
+[2025-11-11 22:34:40] Assassin +8 EXP (Total: 16)
+[2025-11-11 22:34:40] IA1 +6 EXP (Total: 68)
+[2025-11-11 22:34:40] AI turn: IA3
+[2025-11-11 22:34:40] IA3 earned 8 coins! (Total: 8)
+[2025-11-11 22:34:40] IA3 +11 EXP (Total: 11)
+[2025-11-11 22:34:40] Warrior +20% bonus EXP (dmg > 10)
+[2025-11-11 22:34:40] Warrior +2 EXP (Total: 44)
+[2025-11-11 22:34:40] ATTACK: IA3 -> Warrior | Dmg: 11 | Warrior HP: 62/100
+[2025-11-11 22:34:40] IA3 +9 EXP (Total: 20)
+[2025-11-11 22:34:40] Warrior +7 EXP (Total: 51)
+[2025-11-11 22:34:40] Player turn: Warrior
+[2025-11-11 22:34:40] 💥 CRITICAL HIT! +7 bonus coins
+[2025-11-11 22:34:40] Warrior earned 19 coins! (Total: 30)
+[2025-11-11 22:34:40] Warrior +15 EXP (Total: 66)
+[2025-11-11 22:34:40] IA1 +20% bonus EXP (dmg > 10)
+[2025-11-11 22:34:40] IA1 +6 EXP (Total: 74)
+[2025-11-11 22:34:40] ATTACK: Warrior -> IA1 | Dmg: 15 | IA1 HP: 43/100
+[2025-11-11 22:34:40] Warrior +9 EXP (Total: 75)
+[2025-11-11 22:34:40] IA1 +7 EXP (Total: 81)
+[2025-11-11 22:34:40] AI turn: IA1
+[2025-11-11 22:34:40] 💥 CRITICAL HIT! +9 bonus coins
+[2025-11-11 22:34:40] IA1 earned 22 coins! (Total: 44)
+[2025-11-11 22:34:40] IA1 +17 EXP (Total: 98)
+[2025-11-11 22:34:40] Warrior +20% bonus EXP (dmg > 10)
+[2025-11-11 22:34:40] Warrior +2 EXP (Total: 77)
+[2025-11-11 22:34:40] ATTACK: IA1 -> Warrior | Dmg: 17 | Warrior HP: 45/100
+[2025-11-11 22:34:40] IA1 +8 EXP (Total: 106)
+[2025-11-11 22:34:40] LEVEL UP! IA1 -> Rank 2!
+[2025-11-11 22:34:40] Stats: ATK:19 DEF:6 MaxHP:110
+[2025-11-11 22:34:40] Warrior +7 EXP (Total: 84)
+[2025-11-11 22:34:41] Player turn: Archer
+[2025-11-11 22:34:41] 💥 CRITICAL HIT! +9 bonus coins
+[2025-11-11 22:34:41] Archer earned 22 coins! (Total: 43)
+[2025-11-11 22:34:41] Archer +17 EXP (Total: 47)
+[2025-11-11 22:34:41] IA1 +20% bonus EXP (dmg > 10)
+[2025-11-11 22:34:41] IA1 +7 EXP (Total: 13)
+[2025-11-11 22:34:41] ATTACK: Archer -> IA1 | Dmg: 17 | IA1 HP: 46/110
+[2025-11-11 22:34:41] Archer +12 EXP (Total: 59)
+[2025-11-11 22:34:41] IA1 +8 EXP (Total: 21)
+[2025-11-11 22:34:41] AI turn: IA2
+[2025-11-11 22:34:41] IA2 earned 4 coins! (Total: 9)
+[2025-11-11 22:34:41] IA2 +6 EXP (Total: 21)
+[2025-11-11 22:34:41] Warrior +2 EXP (Total: 86)
+[2025-11-11 22:34:41] ATTACK: IA2 -> Warrior | Dmg: 6 | Warrior HP: 39/100
+[2025-11-11 22:34:41] IA2 +11 EXP (Total: 32)
+[2025-11-11 22:34:41] Warrior +7 EXP (Total: 93)
+[2025-11-11 22:34:42] Player turn: Assassin
+[2025-11-11 22:34:42] Assassin earned 7 coins! (Total: 13)
+[2025-11-11 22:34:42] Assassin +9 EXP (Total: 25)
+[2025-11-11 22:34:42] IA1 +6 EXP (Total: 27)
+[2025-11-11 22:34:42] ATTACK: Assassin -> IA1 | Dmg: 9 | IA1 HP: 37/110
+[2025-11-11 22:34:42] Assassin +9 EXP (Total: 34)
+[2025-11-11 22:34:42] IA1 +7 EXP (Total: 34)
+[2025-11-11 22:34:42] AI turn: IA3
+[2025-11-11 22:34:42] 💥 CRITICAL HIT! +10 bonus coins
+[2025-11-11 22:34:42] IA3 earned 22 coins! (Total: 30)
+[2025-11-11 22:34:42] IA3 +15 EXP (Total: 35)
+[2025-11-11 22:34:42] Warrior +20% bonus EXP (dmg > 10)
+[2025-11-11 22:34:42] Warrior +2 EXP (Total: 95)
+[2025-11-11 22:34:42] ATTACK: IA3 -> Warrior | Dmg: 15 | Warrior HP: 24/100
+[2025-11-11 22:34:42] IA3 +9 EXP (Total: 44)
+[2025-11-11 22:34:42] Warrior +10 EXP (Total: 105)
+[2025-11-11 22:34:42] LEVEL UP! Warrior -> Rank 2!
+[2025-11-11 22:34:42] Stats: ATK:15 DEF:3 MaxHP:110
+[2025-11-11 22:34:42] Player turn: Warrior
+[2025-11-11 22:34:42] 💥 CRITICAL HIT! +6 bonus coins
+[2025-11-11 22:34:42] Warrior earned 21 coins! (Total: 51)
+[2025-11-11 22:34:42] Warrior +16 EXP (Total: 21)
+[2025-11-11 22:34:42] IA1 +20% bonus EXP (dmg > 10)
+[2025-11-11 22:34:42] IA1 +7 EXP (Total: 41)
+[2025-11-11 22:34:42] ATTACK: Warrior -> IA1 | Dmg: 16 | IA1 HP: 21/110
+[2025-11-11 22:34:42] Warrior +9 EXP (Total: 30)
+[2025-11-11 22:34:42] IA1 +6 EXP (Total: 47)
+[2025-11-11 22:34:42] AI turn: IA1
+[2025-11-11 22:34:42] 💥 CRITICAL HIT! +10 bonus coins
+[2025-11-11 22:34:42] IA1 earned 28 coins! (Total: 72)
+[2025-11-11 22:34:42] IA1 +19 EXP (Total: 66)
+[2025-11-11 22:34:42] Warrior +20% bonus EXP (dmg > 10)
+[2025-11-11 22:34:42] Warrior +3 EXP (Total: 33)
+[2025-11-11 22:34:42] ATTACK: IA1 -> Warrior | Dmg: 19 | Warrior HP: 25/110
+[2025-11-11 22:34:42] IA1 +8 EXP (Total: 74)
+[2025-11-11 22:34:42] Warrior +5 EXP (Total: 38)
+[2025-11-11 22:34:43] Player turn: Archer
+[2025-11-11 22:34:44] 💥 CRITICAL HIT! +10 bonus coins
+[2025-11-11 22:34:44] Archer earned 24 coins! (Total: 67)
+[2025-11-11 22:34:44] Archer +18 EXP (Total: 77)
+[2025-11-11 22:34:44] IA1 +20% bonus EXP (dmg > 10)
+[2025-11-11 22:34:44] IA1 +7 EXP (Total: 81)
+[2025-11-11 22:34:44] ATTACK: Archer -> IA1 | Dmg: 18 | IA1 HP: 3/110
+[2025-11-11 22:34:44] Archer +7 EXP (Total: 84)
+[2025-11-11 22:34:44] IA1 +8 EXP (Total: 89)
+[2025-11-11 22:34:44] AI turn: IA2
+[2025-11-11 22:34:44] IA2 earned 4 coins! (Total: 13)
+[2025-11-11 22:34:44] IA2 +5 EXP (Total: 37)
+[2025-11-11 22:34:44] Warrior +3 EXP (Total: 41)
+[2025-11-11 22:34:44] ATTACK: IA2 -> Warrior | Dmg: 5 | Warrior HP: 20/110
+[2025-11-11 22:34:44] IA2 +10 EXP (Total: 47)
+[2025-11-11 22:34:44] Warrior +8 EXP (Total: 49)
+[2025-11-11 22:34:44] Player turn: Assassin
+[2025-11-11 22:34:44] 💀 IA1 DEFEATED! +36 coins bonus!
+[2025-11-11 22:34:44] Assassin earned 43 coins! (Total: 56)
+[2025-11-11 22:34:44] Assassin +9 EXP (Total: 43)
+[2025-11-11 22:34:44] IA1 +6 EXP (Total: 95)
+[2025-11-11 22:34:44] ATTACK: Assassin -> IA1 | Dmg: 9 | IA1 HP: 0/110
+[2025-11-11 22:34:44] IA1 defeated!
+[2025-11-11 22:34:44] Assassin +11 EXP (Total: 54)
+[2025-11-11 22:34:44] IA1 +7 EXP (Total: 102)
+[2025-11-11 22:34:44] LEVEL UP! IA1 -> Rank 3!
+[2025-11-11 22:34:44] Stats: ATK:21 DEF:7 MaxHP:120
+[2025-11-11 22:34:44] AI turn: IA3
+[2025-11-11 22:34:44] IA3 earned 8 coins! (Total: 38)
+[2025-11-11 22:34:44] IA3 +11 EXP (Total: 55)
+[2025-11-11 22:34:44] Warrior +20% bonus EXP (dmg > 10)
+[2025-11-11 22:34:44] Warrior +3 EXP (Total: 52)
+[2025-11-11 22:34:44] ATTACK: IA3 -> Warrior | Dmg: 11 | Warrior HP: 9/110
+[2025-11-11 22:34:44] IA3 +8 EXP (Total: 63)
+[2025-11-11 22:34:44] Warrior +9 EXP (Total: 61)
+[2025-11-11 22:34:45] Player turn: Warrior
+[2025-11-11 22:34:45] 💥 CRITICAL HIT! +8 bonus coins
+[2025-11-11 22:34:45] Warrior earned 23 coins! (Total: 74)
+[2025-11-11 22:34:45] Warrior +15 EXP (Total: 76)
+[2025-11-11 22:34:45] IA2 +20% bonus EXP (dmg > 10)
+[2025-11-11 22:34:45] IA2 +4 EXP (Total: 51)
+[2025-11-11 22:34:45] ATTACK: Warrior -> IA2 | Dmg: 15 | IA2 HP: 85/100
+[2025-11-11 22:34:45] Warrior +11 EXP (Total: 87)
+[2025-11-11 22:34:45] IA2 +8 EXP (Total: 59)
+[2025-11-11 22:34:45] Player turn: Archer
+[2025-11-11 22:34:46] 💥 CRITICAL HIT! +7 bonus coins
+[2025-11-11 22:34:46] Archer earned 19 coins! (Total: 86)
+[2025-11-11 22:34:46] Archer +16 EXP (Total: 100)
+[2025-11-11 22:34:46] LEVEL UP! Archer -> Rank 2!
+[2025-11-11 22:34:46] Stats: ATK:19 DEF:11 MaxHP:110
+[2025-11-11 22:34:46] IA2 +20% bonus EXP (dmg > 10)
+[2025-11-11 22:34:46] IA2 +4 EXP (Total: 63)
+[2025-11-11 22:34:46] ATTACK: Archer -> IA2 | Dmg: 16 | IA2 HP: 69/100
+[2025-11-11 22:34:46] Archer +9 EXP (Total: 9)
+[2025-11-11 22:34:46] IA2 +9 EXP (Total: 72)
+[2025-11-11 22:34:46] AI turn: IA2
+[2025-11-11 22:34:46] IA2 earned 5 coins! (Total: 18)
+[2025-11-11 22:34:46] IA2 +7 EXP (Total: 79)
+[2025-11-11 22:34:46] Warrior +3 EXP (Total: 90)
+[2025-11-11 22:34:46] ATTACK: IA2 -> Warrior | Dmg: 7 | Warrior HP: 2/110
+[2025-11-11 22:34:46] IA2 +8 EXP (Total: 87)
+[2025-11-11 22:34:46] Warrior +9 EXP (Total: 99)
+[2025-11-11 22:34:46] Player turn: Assassin
+[2025-11-11 22:34:47] Assassin earned 7 coins! (Total: 63)
+[2025-11-11 22:34:47] Assassin +9 EXP (Total: 63)
+[2025-11-11 22:34:47] IA2 +4 EXP (Total: 91)
+[2025-11-11 22:34:47] ATTACK: Assassin -> IA2 | Dmg: 9 | IA2 HP: 60/100
+[2025-11-11 22:34:47] Assassin +7 EXP (Total: 70)
+[2025-11-11 22:34:47] IA2 +8 EXP (Total: 99)
+[2025-11-11 22:34:47] AI turn: IA3
+[2025-11-11 22:34:47] 💀 Warrior DEFEATED! +36 coins bonus!
+[2025-11-11 22:34:47] IA3 earned 47 coins! (Total: 85)
+[2025-11-11 22:34:47] IA3 +14 EXP (Total: 77)
+[2025-11-11 22:34:47] Warrior +20% bonus EXP (dmg > 10)
+[2025-11-11 22:34:47] Warrior +3 EXP (Total: 102)
+[2025-11-11 22:34:47] LEVEL UP! Warrior -> Rank 3!
+[2025-11-11 22:34:47] Stats: ATK:17 DEF:4 MaxHP:120
+[2025-11-11 22:34:47] ATTACK: IA3 -> Warrior | Dmg: 14 | Warrior HP: 20/120
+[2025-11-11 22:34:47] Warrior defeated!
+[2025-11-11 22:34:47] IA3 +9 EXP (Total: 86)
+[2025-11-11 22:34:47] Warrior +7 EXP (Total: 9)
+[2025-11-11 22:34:47] Player turn: Archer
+[2025-11-11 22:34:47] 💥 CRITICAL HIT! +8 bonus coins
+[2025-11-11 22:34:47] Archer earned 27 coins! (Total: 113)
+[2025-11-11 22:34:47] Archer +21 EXP (Total: 30)
+[2025-11-11 22:34:47] IA2 +20% bonus EXP (dmg > 10)
+[2025-11-11 22:34:47] IA2 +4 EXP (Total: 103)
+[2025-11-11 22:34:47] LEVEL UP! IA2 -> Rank 2!
+[2025-11-11 22:34:47] Stats: ATK:8 DEF:5 MaxHP:110
+[2025-11-11 22:34:47] ATTACK: Archer -> IA2 | Dmg: 21 | IA2 HP: 59/110
+[2025-11-11 22:34:47] Archer +9 EXP (Total: 39)
+[2025-11-11 22:34:47] IA2 +8 EXP (Total: 11)
+[2025-11-11 22:34:47] AI turn: IA2
+[2025-11-11 22:34:47] IA2 earned 10 coins! (Total: 28)
+[2025-11-11 22:34:47] IA2 +9 EXP (Total: 20)
+[2025-11-11 22:34:47] Assassin +1 EXP (Total: 71)
+[2025-11-11 22:34:47] ATTACK: IA2 -> Assassin | Dmg: 9 | Assassin HP: 91/100
+[2025-11-11 22:34:47] IA2 +8 EXP (Total: 28)
+[2025-11-11 22:34:47] Assassin +8 EXP (Total: 79)
+[2025-11-11 22:34:48] Player turn: Assassin
+[2025-11-11 22:34:48] Assassin earned 6 coins! (Total: 69)
+[2025-11-11 22:34:48] Assassin +8 EXP (Total: 87)
+[2025-11-11 22:34:48] IA2 +5 EXP (Total: 33)
+[2025-11-11 22:34:48] ATTACK: Assassin -> IA2 | Dmg: 8 | IA2 HP: 51/110
+[2025-11-11 22:34:48] Assassin +7 EXP (Total: 94)
+[2025-11-11 22:34:48] IA2 +9 EXP (Total: 42)
+[2025-11-11 22:34:48] AI turn: IA3
+[2025-11-11 22:34:48] IA3 earned 9 coins! (Total: 94)
+[2025-11-11 22:34:48] IA3 +12 EXP (Total: 98)
+[2025-11-11 22:34:48] Assassin +20% bonus EXP (dmg > 10)
+[2025-11-11 22:34:48] Assassin +1 EXP (Total: 95)
+[2025-11-11 22:34:48] ATTACK: IA3 -> Assassin | Dmg: 12 | Assassin HP: 79/100
+[2025-11-11 22:34:48] IA3 +12 EXP (Total: 110)
+[2025-11-11 22:34:48] LEVEL UP! IA3 -> Rank 2!
+[2025-11-11 22:34:48] Stats: ATK:14 DEF:6 MaxHP:110
+[2025-11-11 22:34:48] Assassin +5 EXP (Total: 100)
+[2025-11-11 22:34:48] LEVEL UP! Assassin -> Rank 2!
+[2025-11-11 22:34:48] Stats: ATK:12 DEF:2 MaxHP:110
+[2025-11-11 22:34:48] Player turn: Archer
+[2025-11-11 22:34:48] 💥 CRITICAL HIT! +6 bonus coins
+[2025-11-11 22:34:48] Archer earned 26 coins! (Total: 139)
+[2025-11-11 22:34:48] Archer +22 EXP (Total: 61)
+[2025-11-11 22:34:48] IA2 +20% bonus EXP (dmg > 10)
+[2025-11-11 22:34:48] IA2 +6 EXP (Total: 48)
+[2025-11-11 22:34:48] ATTACK: Archer -> IA2 | Dmg: 22 | IA2 HP: 29/110
+[2025-11-11 22:34:48] Archer +8 EXP (Total: 69)
+[2025-11-11 22:34:48] IA2 +5 EXP (Total: 53)
+[2025-11-11 22:34:48] AI turn: IA2
+[2025-11-11 22:34:48] IA2 earned 9 coins! (Total: 37)
+[2025-11-11 22:34:48] IA2 +8 EXP (Total: 61)
+[2025-11-11 22:34:48] Assassin +2 EXP (Total: 2)
+[2025-11-11 22:34:48] ATTACK: IA2 -> Assassin | Dmg: 8 | Assassin HP: 91/110
+[2025-11-11 22:34:48] IA2 +8 EXP (Total: 69)
+[2025-11-11 22:34:48] Assassin +7 EXP (Total: 9)
+[2025-11-11 22:34:48] Player turn: Assassin
+[2025-11-11 22:34:49] Assassin earned 13 coins! (Total: 82)
+[2025-11-11 22:34:49] Assassin +13 EXP (Total: 22)
+[2025-11-11 22:34:49] IA2 +20% bonus EXP (dmg > 10)
+[2025-11-11 22:34:49] IA2 +6 EXP (Total: 75)
+[2025-11-11 22:34:49] ATTACK: Assassin -> IA2 | Dmg: 13 | IA2 HP: 16/110
+[2025-11-11 22:34:49] Assassin +9 EXP (Total: 31)
+[2025-11-11 22:34:49] IA2 +5 EXP (Total: 80)
+[2025-11-11 22:34:49] AI turn: IA3
+[2025-11-11 22:34:49] 💥 CRITICAL HIT! +7 bonus coins
+[2025-11-11 22:34:49] IA3 earned 23 coins! (Total: 117)
+[2025-11-11 22:34:49] IA3 +17 EXP (Total: 27)
+[2025-11-11 22:34:49] Assassin +20% bonus EXP (dmg > 10)
+[2025-11-11 22:34:49] Assassin +2 EXP (Total: 33)
+[2025-11-11 22:34:49] ATTACK: IA3 -> Assassin | Dmg: 17 | Assassin HP: 74/110
+[2025-11-11 22:34:49] IA3 +11 EXP (Total: 38)
+[2025-11-11 22:34:49] Assassin +7 EXP (Total: 40)
+[2025-11-11 22:34:49] Player turn: Archer
+[2025-11-11 22:34:49] 💥 CRITICAL HIT! +6 bonus coins
+[2025-11-11 22:34:49] 💀 IA2 DEFEATED! +36 coins bonus!
+[2025-11-11 22:34:49] Archer earned 60 coins! (Total: 199)
+[2025-11-11 22:34:49] Archer +19 EXP (Total: 88)
+[2025-11-11 22:34:49] IA2 +20% bonus EXP (dmg > 10)
+[2025-11-11 22:34:49] IA2 +6 EXP (Total: 86)
+[2025-11-11 22:34:49] ATTACK: Archer -> IA2 | Dmg: 19 | IA2 HP: 0/110
+[2025-11-11 22:34:49] IA2 defeated!
+[2025-11-11 22:34:49] Archer +9 EXP (Total: 97)
+[2025-11-11 22:34:49] IA2 +10 EXP (Total: 96)
+[2025-11-11 22:34:49] Player turn: Assassin
+[2025-11-11 22:34:51] Assassin earned 12 coins! (Total: 94)
+[2025-11-11 22:34:51] Assassin +12 EXP (Total: 52)
+[2025-11-11 22:34:51] IA3 +20% bonus EXP (dmg > 10)
+[2025-11-11 22:34:51] IA3 +7 EXP (Total: 45)
+[2025-11-11 22:34:51] ATTACK: Assassin -> IA3 | Dmg: 12 | IA3 HP: 98/110
+[2025-11-11 22:34:51] Assassin +7 EXP (Total: 59)
+[2025-11-11 22:34:51] IA3 +9 EXP (Total: 54)
+[2025-11-11 22:34:51] AI turn: IA3
+[2025-11-11 22:34:51] 💥 CRITICAL HIT! +6 bonus coins
+[2025-11-11 22:34:51] IA3 earned 21 coins! (Total: 138)
+[2025-11-11 22:34:51] IA3 +16 EXP (Total: 70)
+[2025-11-11 22:34:51] Assassin +20% bonus EXP (dmg > 10)
+[2025-11-11 22:34:51] Assassin +2 EXP (Total: 61)
+[2025-11-11 22:34:51] ATTACK: IA3 -> Assassin | Dmg: 16 | Assassin HP: 58/110
+[2025-11-11 22:34:51] IA3 +9 EXP (Total: 79)
+[2025-11-11 22:34:51] Assassin +10 EXP (Total: 71)
+[2025-11-11 22:34:51] Player turn: Archer
+[2025-11-11 22:34:52] 💥 CRITICAL HIT! +10 bonus coins
+[2025-11-11 22:34:52] Archer earned 27 coins! (Total: 226)
+[2025-11-11 22:34:52] Archer +18 EXP (Total: 115)
+[2025-11-11 22:34:52] LEVEL UP! Archer -> Rank 3!
+[2025-11-11 22:34:52] Stats: ATK:21 DEF:12 MaxHP:120
+[2025-11-11 22:34:52] IA3 +20% bonus EXP (dmg > 10)
+[2025-11-11 22:34:52] IA3 +7 EXP (Total: 86)
+[2025-11-11 22:34:52] ATTACK: Archer -> IA3 | Dmg: 18 | IA3 HP: 80/110
+[2025-11-11 22:34:52] Archer +7 EXP (Total: 22)
+[2025-11-11 22:34:52] IA3 +9 EXP (Total: 95)
+[2025-11-11 22:34:52] Player turn: Assassin
+[2025-11-11 22:34:52] Assassin earned 12 coins! (Total: 106)
+[2025-11-11 22:34:52] Assassin +12 EXP (Total: 83)
+[2025-11-11 22:34:52] IA3 +20% bonus EXP (dmg > 10)
+[2025-11-11 22:34:52] IA3 +7 EXP (Total: 102)
+[2025-11-11 22:34:52] LEVEL UP! IA3 -> Rank 3!
+[2025-11-11 22:34:52] Stats: ATK:16 DEF:7 MaxHP:120
+[2025-11-11 22:34:52] ATTACK: Assassin -> IA3 | Dmg: 12 | IA3 HP: 88/120
+[2025-11-11 22:34:52] Assassin +8 EXP (Total: 91)
+[2025-11-11 22:34:52] IA3 +5 EXP (Total: 7)
+[2025-11-11 22:34:52] AI turn: IA3
+[2025-11-11 22:34:52] 💥 CRITICAL HIT! +6 bonus coins
+[2025-11-11 22:34:52] IA3 earned 24 coins! (Total: 162)
+[2025-11-11 22:34:52] IA3 +16 EXP (Total: 23)
+[2025-11-11 22:34:52] Assassin +20% bonus EXP (dmg > 10)
+[2025-11-11 22:34:52] Assassin +2 EXP (Total: 93)
+[2025-11-11 22:34:52] ATTACK: IA3 -> Assassin | Dmg: 16 | Assassin HP: 42/110
+[2025-11-11 22:34:52] IA3 +11 EXP (Total: 34)
+[2025-11-11 22:34:52] Assassin +6 EXP (Total: 99)
+[2025-11-11 22:34:52] Player turn: Archer
+[2025-11-11 22:34:52] 💥 CRITICAL HIT! +9 bonus coins
+[2025-11-11 22:34:52] Archer earned 31 coins! (Total: 257)
+[2025-11-11 22:34:52] Archer +20 EXP (Total: 42)
+[2025-11-11 22:34:52] IA3 +20% bonus EXP (dmg > 10)
+[2025-11-11 22:34:52] IA3 +8 EXP (Total: 42)
+[2025-11-11 22:34:52] ATTACK: Archer -> IA3 | Dmg: 20 | IA3 HP: 68/120
+[2025-11-11 22:34:52] Archer +8 EXP (Total: 50)
+[2025-11-11 22:34:52] IA3 +9 EXP (Total: 51)
+[2025-11-11 22:34:52] Player turn: Assassin
+[2025-11-11 22:34:52] Assassin earned 12 coins! (Total: 118)
+[2025-11-11 22:34:52] Assassin +12 EXP (Total: 111)
+[2025-11-11 22:34:52] LEVEL UP! Assassin -> Rank 3!
+[2025-11-11 22:34:52] Stats: ATK:14 DEF:3 MaxHP:120
+[2025-11-11 22:34:52] IA3 +20% bonus EXP (dmg > 10)
+[2025-11-11 22:34:52] IA3 +8 EXP (Total: 59)
+[2025-11-11 22:34:52] ATTACK: Assassin -> IA3 | Dmg: 12 | IA3 HP: 56/120
+[2025-11-11 22:34:52] Assassin +7 EXP (Total: 18)
+[2025-11-11 22:34:52] IA3 +5 EXP (Total: 64)
+[2025-11-11 22:34:52] AI turn: IA3
+[2025-11-11 22:34:52] 💥 CRITICAL HIT! +8 bonus coins
+[2025-11-11 22:34:52] IA3 earned 28 coins! (Total: 190)
+[2025-11-11 22:34:52] IA3 +18 EXP (Total: 82)
+[2025-11-11 22:34:52] Assassin +20% bonus EXP (dmg > 10)
+[2025-11-11 22:34:52] Assassin +3 EXP (Total: 21)
+[2025-11-11 22:34:52] ATTACK: IA3 -> Assassin | Dmg: 18 | Assassin HP: 44/120
+[2025-11-11 22:34:52] IA3 +9 EXP (Total: 91)
+[2025-11-11 22:34:52] Assassin +5 EXP (Total: 26)
+[2025-11-11 22:34:53] Player turn: Archer
+[2025-11-11 22:34:53] 💥 CRITICAL HIT! +5 bonus coins
+[2025-11-11 22:34:53] Archer earned 28 coins! (Total: 285)
+[2025-11-11 22:34:53] Archer +22 EXP (Total: 72)
+[2025-11-11 22:34:53] IA3 +20% bonus EXP (dmg > 10)
+[2025-11-11 22:34:53] IA3 +8 EXP (Total: 99)
+[2025-11-11 22:34:53] ATTACK: Archer -> IA3 | Dmg: 22 | IA3 HP: 34/120
+[2025-11-11 22:34:53] Archer +8 EXP (Total: 80)
+[2025-11-11 22:34:53] IA3 +8 EXP (Total: 107)
+[2025-11-11 22:34:53] LEVEL UP! IA3 -> Rank 4!
+[2025-11-11 22:34:53] Stats: ATK:18 DEF:8 MaxHP:130
+[2025-11-11 22:34:53] Player turn: Assassin
+[2025-11-11 22:34:53] 💥 CRITICAL HIT! +10 bonus coins
+[2025-11-11 22:34:53] Assassin earned 28 coins! (Total: 146)
+[2025-11-11 22:34:53] Assassin +15 EXP (Total: 41)
+[2025-11-11 22:34:53] IA3 +20% bonus EXP (dmg > 10)
+[2025-11-11 22:34:53] IA3 +9 EXP (Total: 16)
+[2025-11-11 22:34:53] ATTACK: Assassin -> IA3 | Dmg: 15 | IA3 HP: 39/130
+[2025-11-11 22:34:53] Assassin +10 EXP (Total: 51)
+[2025-11-11 22:34:53] IA3 +10 EXP (Total: 26)
+[2025-11-11 22:34:53] AI turn: IA3
+[2025-11-11 22:34:53] 💥 CRITICAL HIT! +5 bonus coins
+[2025-11-11 22:34:53] IA3 earned 28 coins! (Total: 218)
+[2025-11-11 22:34:53] IA3 +18 EXP (Total: 44)
+[2025-11-11 22:34:53] Assassin +20% bonus EXP (dmg > 10)
+[2025-11-11 22:34:53] Assassin +3 EXP (Total: 54)
+[2025-11-11 22:34:53] ATTACK: IA3 -> Assassin | Dmg: 18 | Assassin HP: 26/120
+[2025-11-11 22:34:53] IA3 +7 EXP (Total: 51)
+[2025-11-11 22:34:53] Assassin +6 EXP (Total: 60)
+[2025-11-11 22:34:53] Player turn: Archer
+[2025-11-11 22:34:53] 💥 CRITICAL HIT! +10 bonus coins
+[2025-11-11 22:34:53] Archer earned 34 coins! (Total: 319)
+[2025-11-11 22:34:53] Archer +23 EXP (Total: 103)
+[2025-11-11 22:34:53] LEVEL UP! Archer -> Rank 4!
+[2025-11-11 22:34:53] Stats: ATK:23 DEF:13 MaxHP:130
+[2025-11-11 22:34:53] IA3 +20% bonus EXP (dmg > 10)
+[2025-11-11 22:34:53] IA3 +9 EXP (Total: 60)
+[2025-11-11 22:34:53] ATTACK: Archer -> IA3 | Dmg: 23 | IA3 HP: 16/130
+[2025-11-11 22:34:53] Archer +8 EXP (Total: 11)
+[2025-11-11 22:34:53] IA3 +6 EXP (Total: 66)
+[2025-11-11 22:34:53] Player turn: Assassin
+[2025-11-11 22:34:53] Assassin earned 15 coins! (Total: 161)
+[2025-11-11 22:34:53] Assassin +12 EXP (Total: 72)
+[2025-11-11 22:34:53] IA3 +20% bonus EXP (dmg > 10)
+[2025-11-11 22:34:53] IA3 +9 EXP (Total: 75)
+[2025-11-11 22:34:53] ATTACK: Assassin -> IA3 | Dmg: 12 | IA3 HP: 4/130
+[2025-11-11 22:34:53] Assassin +12 EXP (Total: 84)
+[2025-11-11 22:34:53] IA3 +10 EXP (Total: 85)
+[2025-11-11 22:34:53] AI turn: IA3
+[2025-11-11 22:34:53] 💥 CRITICAL HIT! +7 bonus coins
+[2025-11-11 22:34:53] IA3 earned 32 coins! (Total: 250)
+[2025-11-11 22:34:53] IA3 +21 EXP (Total: 106)
+[2025-11-11 22:34:53] LEVEL UP! IA3 -> Rank 5!
+[2025-11-11 22:34:53] Stats: ATK:20 DEF:9 MaxHP:140
+[2025-11-11 22:34:53] Assassin +20% bonus EXP (dmg > 10)
+[2025-11-11 22:34:53] Assassin +3 EXP (Total: 87)
+[2025-11-11 22:34:53] ATTACK: IA3 -> Assassin | Dmg: 21 | Assassin HP: 5/120
+[2025-11-11 22:34:53] IA3 +8 EXP (Total: 14)
+[2025-11-11 22:34:53] Assassin +5 EXP (Total: 92)
+[2025-11-11 22:34:54] Player turn: Archer
+[2025-11-11 22:34:54] 💥 CRITICAL HIT! +8 bonus coins
+[2025-11-11 22:34:54] 💀 IA3 DEFEATED! +60 coins bonus!
+[2025-11-11 22:34:54] Archer earned 97 coins! (Total: 416)
+[2025-11-11 22:34:54] Archer +25 EXP (Total: 36)
+[2025-11-11 22:34:54] IA3 +20% bonus EXP (dmg > 10)
+[2025-11-11 22:34:54] IA3 +10 EXP (Total: 24)
+[2025-11-11 22:34:54] ATTACK: Archer -> IA3 | Dmg: 25 | IA3 HP: 0/140
+[2025-11-11 22:34:54] IA3 defeated!
+[2025-11-11 22:34:54] Archer +7 EXP (Total: 43)
+[2025-11-11 22:34:54] IA3 +7 EXP (Total: 31)
+[2025-11-11 22:34:54] Player turn: Assassin
+[2025-11-11 22:34:54] GAME OVER: Player Victory
+[2025-11-11 22:34:54] Error playing music: No file './sounds/win.mp3' found in working directory 'C:\Users\dkura\OneDrive\Área de Trabalho\trabalho escola\pygame\codeBlocks'.
+[2025-11-11 22:34:54] Event log saved

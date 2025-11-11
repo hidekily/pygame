@@ -93,23 +93,28 @@ while running:
             
             # BATTLE ================================================================================
             elif game.state == BATTLE:
-                # Check button clicks first (recruit, save)
-                if not battle.handle_button_click(pos, game):
-                    # Then check attacks
-                    attacked = battle.handle_click(pos, game.player_team, game.ai_team, game.current, game)
-                    if attacked:
-                        game.check_end()
-                        if game.state == BATTLE:
-                            pygame.time.wait(400)
-                            # Continue advancing turns until it's player's turn
-                            game.turn_idx, game.current = battle.next_turn(game.turn_order, game.turn_idx, game)
-                            
-                            # Keep advancing through AI turns
-                            while game.current and game.current[0] == "ai" and game.state == BATTLE:
-                                game.check_end()
-                                if game.state == BATTLE:
-                                    pygame.time.wait(400)
-                                    game.turn_idx, game.current = battle.next_turn(game.turn_order, game.turn_idx, game)
+                # REPLACED BATTLE CLICK LOGIC
+                # A single, correct call to handle_click
+                new_state, new_message = battle.handle_click(pos, game, screen) 
+                
+                # Check for state change (e.g., game over)
+                if new_state is not None:
+                    game.state = new_state
+                    game.message = new_message
+
+                # After the player's click (and potential turn advance), 
+                # keep advancing through any subsequent AI turns.
+                while game.current and game.current[0] == "ai" and game.state == BATTLE:
+                    game.check_end()
+                    if game.state == BATTLE:
+                        # Draw the screen to show who is turning
+                        battle.draw(screen, game.player_team, game.ai_team, game.current, game.message, m_pos)
+                        pygame.display.flip()
+                        pygame.time.wait(400) # AI "thinking" time
+                        
+                        # next_turn will find the AI, run its turn, and advance to the *next* unit
+                        game.turn_idx, game.current = battle.next_turn(game.turn_order, game.turn_idx, game)
+                        game.check_end() # Check if the AI's move ended the game
             
             # END ================================================================================
             elif game.state == END:

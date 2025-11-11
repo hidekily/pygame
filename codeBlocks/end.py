@@ -23,7 +23,7 @@ def draw(screen, message, player_team, ai_team):
     btn(screen, 700, 480, 180, 50, "PLAY AGAIN", GREEN)
 
 def handle_click(pos):
-    """Processa cliques na tela final"""
+    """Processes clicks on the end screen"""
     if pygame.Rect(400, 480, 180, 50).collidepoint(pos):
         return MENU
     elif pygame.Rect(700, 480, 180, 50).collidepoint(pos):

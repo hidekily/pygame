@@ -1,0 +1,92 @@
+{
+  "version": "1.0",
+  "state": 2,
+  "turn_idx": 0,
+  "message": "Your turn: Tank! Select a target or skip turn.",
+  "player_team": [
+    {
+      "name": "Tank",
+      "prof": "Tank",
+      "rank": 1,
+      "exp": 0,
+      "hp": 100,
+      "hp_max": 100,
+      "atk": 8,
+      "defense": 13,
+      "coins": 0,
+      "alive": true,
+      "sprite_path": "./images/sprites/tanker.png"
+    },
+    {
+      "name": "Paladin",
+      "prof": "Tank",
+      "rank": 1,
+      "exp": 0,
+      "hp": 100,
+      "hp_max": 100,
+      "atk": 1,
+      "defense": 6,
+      "coins": 0,
+      "alive": true,
+      "sprite_path": "./images/sprites/knight.png"
+    },
+    {
+      "name": "Archer",
+      "prof": "Warrior",
+      "rank": 1,
+      "exp": 0,
+      "hp": 100,
+      "hp_max": 100,
+      "atk": 14,
+      "defense": 4,
+      "coins": 0,
+      "alive": true,
+      "sprite_path": "./images/sprites/archer.png"
+    }
+  ],
+  "ai_team": [
+    {
+      "name": "IA1",
+      "prof": "Tank",
+      "rank": 1,
+      "exp": 0,
+      "hp": 100,
+      "hp_max": 100,
+      "atk": 1,
+      "defense": 8,
+      "coins": 0,
+      "alive": true,
+      "sprite_path": null
+    },
+    {
+      "name": "IA2",
+      "prof": "Tank",
+      "rank": 1,
+      "exp": 0,
+      "hp": 100,
+      "hp_max": 100,
+      "atk": 3,
+      "defense": 11,
+      "coins": 0,
+      "alive": true,
+      "sprite_path": null
+    },
+    {
+      "name": "IA3",
+      "prof": "Warrior",
+      "rank": 1,
+      "exp": 0,
+      "hp": 100,
+      "hp_max": 100,
+      "atk": 7,
+      "defense": 3,
+      "coins": 0,
+      "alive": true,
+      "sprite_path": null
+    }
+  ],
+  "current": {
+    "team": "player",
+    "unit_name": "Tank"
+  }
+}
