@@ -10,14 +10,18 @@ def draw(screen, player_team, ai_team, current, message, m_pos):
     t = f.render("⚔️ BATTLE ⚔️", True, YELLOW)
     screen.blit(t, (SCREEN_WIDTH//2 - t.get_width()//2, 15))
     
-    # OUR TEAM ===============================================================================
+    # OUR TEAM (supports 6 units now)
     f2 = pygame.font.Font(None, 28)
     screen.blit(f2.render("YOUR TEAM", True, GREEN), (80, 80))
     for i, p in enumerate(player_team):
+        row = i // 3  # 3 per row
+        col = i % 3
+        x = 80 + col * 250
+        y = 150 + row * 200
         is_turn = current and current[0]=="player" and current[1]==p
-        p.draw(screen, 80, 150 + i * 200, False, is_turn)
+        p.draw(screen, x, y, False, is_turn)
     
-    # AI TEAM =======================================================================================
+    # AI TEAM
     screen.blit(f2.render("AI TEAM", True, RED), (1050, 80))
     p_turn = current and current[0]=="player"
     for i, p in enumerate(ai_team):
@@ -26,76 +30,108 @@ def draw(screen, player_team, ai_team, current, message, m_pos):
             p.hover = True
         p.draw(screen, 960, 150 + i * 200, p_turn)
     
-    # Event Log Panel (centered)======================================================================
-    log_x, log_y = 480, 180
-    log_w, log_h = 320, 320  # Reduced height to make room for buttons
+    # BATTLE SHOP PANEL (centered, bigger)
+    shop_x, shop_y = 450, 150
+    shop_w, shop_h = 380, 500
+    
+    pygame.draw.rect(screen, (20, 20, 40), (shop_x, shop_y, shop_w, shop_h))
+    pygame.draw.rect(screen, YELLOW, (shop_x, shop_y, shop_w, shop_h), 3)
+    
+    f_shop_title = pygame.font.Font(None, 32)
+    shop_title = f_shop_title.render("🏪 BATTLE SHOP 🏪", True, YELLOW)
+    screen.blit(shop_title, (shop_x + shop_w//2 - shop_title.get_width()//2, shop_y + 10))
+    
+    # Show total coins
+    total_coins = sum(u.coins for u in player_team)
+    f_coins = pygame.font.Font(None, 28)
+    coins_text = f_coins.render(f"💰 Team Coins: {total_coins}", True, (255, 215, 0))
+    screen.blit(coins_text, (shop_x + shop_w//2 - coins_text.get_width()//2, shop_y + 45))
+    
+    # Shop Items
+    item_y = shop_y + 85
+    item_height = 65
+    
+    # Item 1: Healing Potion
+    can_heal = total_coins >= 30
+    heal_color = GREEN if can_heal else (80, 80, 80)
+    btn(screen, shop_x + 10, item_y, shop_w - 20, item_height, 
+        "❤️ HEALING POTION (30💰)", heal_color, can_heal)
+    f_desc = pygame.font.Font(None, 18)
+    desc = f_desc.render("Restore 40 HP to selected unit", True, WHITE if can_heal else (100, 100, 100))
+    screen.blit(desc, (shop_x + shop_w//2 - desc.get_width()//2, item_y + item_height - 18))
+    
+    # Item 2: Attack Buff
+    item_y += item_height + 10
+    can_atk = total_coins >= 40
+    atk_color = (255, 100, 100) if can_atk else (80, 80, 80)
+    btn(screen, shop_x + 10, item_y, shop_w - 20, item_height, 
+        "⚔️ ATTACK BOOST (40💰)", atk_color, can_atk)
+    desc = f_desc.render("Permanently +5 ATK to selected unit", True, WHITE if can_atk else (100, 100, 100))
+    screen.blit(desc, (shop_x + shop_w//2 - desc.get_width()//2, item_y + item_height - 18))
+    
+    # Item 3: Defense Buff
+    item_y += item_height + 10
+    can_def = total_coins >= 40
+    def_color = (100, 150, 255) if can_def else (80, 80, 80)
+    btn(screen, shop_x + 10, item_y, shop_w - 20, item_height, 
+        "🛡️ DEFENSE BOOST (40💰)", def_color, can_def)
+    desc = f_desc.render("Permanently +3 DEF to selected unit", True, WHITE if can_def else (100, 100, 100))
+    screen.blit(desc, (shop_x + shop_w//2 - desc.get_width()//2, item_y + item_height - 18))
+    
+    # Item 4: Recruit
+    item_y += item_height + 10
+    can_recruit = total_coins >= 50 and len(player_team) < 6
+    recruit_color = (150, 255, 150) if can_recruit else (80, 80, 80)
+    btn(screen, shop_x + 10, item_y, shop_w - 20, item_height, 
+        "👤 RECRUIT UNIT (50💰)", recruit_color, can_recruit)
+    desc = f_desc.render("Add new unit to battle immediately!", True, WHITE if can_recruit else (100, 100, 100))
+    screen.blit(desc, (shop_x + shop_w//2 - desc.get_width()//2, item_y + item_height - 18))
+    
+    # Item 5: Save Game
+    item_y += item_height + 10
+    btn(screen, shop_x + 10, item_y, shop_w - 20, 50, "💾 SAVE GAME", (50, 100, 200))
+    
+    # Event Log (smaller, at bottom)
+    log_x, log_y = 450, 670
+    log_w, log_h = 380, 90
     
     pygame.draw.rect(screen, (20, 20, 30), (log_x, log_y, log_w, log_h))
     pygame.draw.rect(screen, YELLOW, (log_x, log_y, log_w, log_h), 2)
     
-    f_log_title = pygame.font.Font(None, 24)
-    log_title = f_log_title.render("⚔️ EVENT LOG ⚔️", True, YELLOW)
-    screen.blit(log_title, (log_x + log_w//2 - log_title.get_width()//2, log_y + 10))
-    
-    f_log = pygame.font.Font(None, 16)
-    log_start_y = log_y + 40
-    line_height = 22
-    max_lines = (log_h - 50) // line_height
-    
-    battle_logs = [l for l in event_log if any(x in l for x in ["ATTACK:", "defeated!", "LEVEL UP!", "turn:", "Battle Started", "earned", "recruited"])]
-    recent_logs = battle_logs[-max_lines:]
+    f_log = pygame.font.Font(None, 14)
+    battle_logs = [l for l in event_log if any(x in l for x in 
+        ["ATTACK:", "defeated!", "LEVEL UP!", "Healing", "Boost", "recruited", "CRITICAL"])]
+    recent_logs = battle_logs[-4:]  # Last 4 messages
     
     for i, log_entry in enumerate(recent_logs):
         if "] " in log_entry:
-            msg_text = log_entry.split("] ", 1)[1][:45]
+            msg_text = log_entry.split("] ", 1)[1][:50]
         else:
-            msg_text = log_entry[:45]
+            msg_text = log_entry[:50]
         
-        if "ATTACK:" in msg_text:
+        if "ATTACK:" in msg_text or "CRITICAL" in msg_text:
             color = (255, 150, 150)
         elif "defeated!" in msg_text:
             color = RED
         elif "LEVEL UP!" in msg_text:
             color = YELLOW
-        elif "Player turn" in msg_text:
-            color = GREEN
-        elif "AI turn" in msg_text:
-            color = (255, 100, 100)
-        elif "earned" in msg_text or "coins" in msg_text:
-            color = (255, 215, 0)  # Gold
+        elif "Healing" in msg_text or "Boost" in msg_text:
+            color = (150, 255, 150)
         else:
             color = (200, 200, 200)
         
         log_line = f_log.render(msg_text, True, color)
-        screen.blit(log_line, (log_x + 10, log_start_y + i * line_height))
+        screen.blit(log_line, (log_x + 10, log_y + 10 + i * 18))
     
-    # Buttons below log ================================================================================
-    button_y = log_y + log_h + 10
-    
-    # TC-23 to TC-26: RECRUIT button
-    total_coins = sum(u.coins for u in player_team)
-    can_recruit = total_coins >= 50 and len(player_team) < 6
-    recruit_color = GREEN if can_recruit else (80, 80, 80)
-    
-    btn(screen, log_x, button_y, 150, 40, f"RECRUIT (50💰)", recruit_color, can_recruit)
-    
-    # Show total coins
-    f_coins = pygame.font.Font(None, 20)
-    coins_text = f_coins.render(f"Team Coins: {total_coins}💰", True, YELLOW)
-    screen.blit(coins_text, (log_x + 160, button_y + 10))
-    
-    # SAVE button (TC-27)
-    btn(screen, log_x, button_y + 50, 150, 40, "SAVE GAME", (50, 100, 200))
-    
-    # Message box ================================================================================
+    # Message box
     f3 = pygame.font.Font(None, 24)
     msg = f3.render(message[:80], True, WHITE)
-    mr = msg.get_rect(center=(SCREEN_WIDTH//2, 700))
+    mr = msg.get_rect(center=(SCREEN_WIDTH//2, 730))
     pygame.draw.rect(screen, BLACK, (mr.x-10, mr.y-5, mr.width+20, mr.height+10))
     pygame.draw.rect(screen, YELLOW, (mr.x-10, mr.y-5, mr.width+20, mr.height+10), 2)
     screen.blit(msg, mr)
     
-    # Turn indicator ================================================================================
+    # Turn indicator
     if current:
         t, c = current
         col = GREEN if t=="player" else RED
@@ -107,7 +143,6 @@ def draw(screen, player_team, ai_team, current, message, m_pos):
 
 def handle_click(pos, player_team, ai_team, current, game):
     """Processes attacks in battle"""
-    # TC-58: Rapid clicking protection
     if hasattr(game, '_last_click_time'):
         if pygame.time.get_ticks() - game._last_click_time < 300:
             return False
@@ -120,22 +155,17 @@ def handle_click(pos, player_team, ai_team, current, game):
             if pygame.Rect(x_pos, y_pos, 120, 120).collidepoint(pos) and p.alive:
                 team, attacker = current
                 
-                # TC-36: Attack sound
                 play_sfx('attack')
-                
                 dmg = attacker.attack(p)
                 game.message = f"{attacker.name} dealt {dmg} damage to {p.name}!"
                 
-                # TC-37: Hit sound with delay
                 if dmg > 0:
                     play_sfx('hit', 200)
                 
-                # TC-38: Defeat sound
                 if not p.alive:
                     game.message += f" - {p.name} defeated!"
                     play_sfx('defeat')
                 
-                # TC-40: Coin sound
                 if dmg > 0:
                     play_sfx('coin')
                 
@@ -143,19 +173,36 @@ def handle_click(pos, player_team, ai_team, current, game):
     return False
 
 def handle_button_click(pos, game):
-    """Handle button clicks (recruit, save)"""
-    log_x, log_y = 480, 180
-    log_h = 320
-    button_y = log_y + log_h + 10
+    """Handle shop button clicks"""
+    shop_x, shop_y = 450, 150
+    shop_w = 380
+    item_y = shop_y + 85
+    item_height = 65
     
-    # RECRUIT button
-    recruit_rect = pygame.Rect(log_x, button_y, 150, 40)
-    if recruit_rect.collidepoint(pos):
-        return try_recruit(game)
+    total_coins = sum(u.coins for u in game.player_team)
     
-    # SAVE button
-    save_rect = pygame.Rect(log_x, button_y + 50, 150, 40)
-    if save_rect.collidepoint(pos):
+    # Healing Potion (30 coins)
+    if pygame.Rect(shop_x + 10, item_y, shop_w - 20, item_height).collidepoint(pos):
+        return buy_healing(game, total_coins)
+    
+    # Attack Boost (40 coins)
+    item_y += item_height + 10
+    if pygame.Rect(shop_x + 10, item_y, shop_w - 20, item_height).collidepoint(pos):
+        return buy_attack_boost(game, total_coins)
+    
+    # Defense Boost (40 coins)
+    item_y += item_height + 10
+    if pygame.Rect(shop_x + 10, item_y, shop_w - 20, item_height).collidepoint(pos):
+        return buy_defense_boost(game, total_coins)
+    
+    # Recruit (50 coins)
+    item_y += item_height + 10
+    if pygame.Rect(shop_x + 10, item_y, shop_w - 20, item_height).collidepoint(pos):
+        return try_recruit(game, total_coins)
+    
+    # Save Game
+    item_y += item_height + 10
+    if pygame.Rect(shop_x + 10, item_y, shop_w - 20, 50).collidepoint(pos):
         from save_load import save_game
         success, msg = save_game(game)
         game.message = msg
@@ -163,31 +210,97 @@ def handle_button_click(pos, game):
     
     return False
 
-def try_recruit(game):
-    """TC-24 to TC-26: Try to recruit new unit"""
-    total_coins = sum(u.coins for u in game.player_team)
-    
-    # TC-26: Check team limit
-    if len(game.player_team) >= 6:
-        game.message = "Team is full! (Max 6 units)"
-        log("Recruit failed: Team full")
-        return False
-    
-    # TC-25: Check coins
-    if total_coins < 50:
-        game.message = f"Not enough coins! Need 50, have {total_coins}"
-        log("Recruit failed: Not enough coins")
-        return False
-    
-    # TC-24: Recruit success
-    # Deduct coins from team (distribute from richest first)
-    remaining = 50
-    for unit in sorted(game.player_team, key=lambda u: u.coins, reverse=True):
+def deduct_coins(player_team, amount):
+    """Deduct coins from team (richest first)"""
+    remaining = amount
+    for unit in sorted(player_team, key=lambda u: u.coins, reverse=True):
         if remaining <= 0:
             break
         deduct = min(unit.coins, remaining)
         unit.coins -= deduct
         remaining -= deduct
+
+def buy_healing(game, total_coins):
+    """Buy healing potion - heals current unit"""
+    if total_coins < 30:
+        game.message = f"Need 30 coins! (Have {total_coins})"
+        return False
+    
+    if not game.current or game.current[0] != "player":
+        game.message = "Wait for your turn to use items!"
+        return False
+    
+    unit = game.current[1]
+    
+    if unit.hp >= unit.hp_max:
+        game.message = f"{unit.name} already at full HP!"
+        return False
+    
+    deduct_coins(game.player_team, 30)
+    heal_amount = 40
+    old_hp = unit.hp
+    unit.hp = min(unit.hp_max, unit.hp + heal_amount)
+    actual_heal = unit.hp - old_hp
+    
+    play_sfx('levelup')  # Use levelup sound for healing
+    game.message = f"❤️ {unit.name} healed {actual_heal} HP! ({old_hp}→{unit.hp})"
+    log(f"Healing Potion used on {unit.name}: +{actual_heal} HP")
+    
+    return False
+
+def buy_attack_boost(game, total_coins):
+    """Buy attack boost - permanent +5 ATK"""
+    if total_coins < 40:
+        game.message = f"Need 40 coins! (Have {total_coins})"
+        return False
+    
+    if not game.current or game.current[0] != "player":
+        game.message = "Wait for your turn to use items!"
+        return False
+    
+    unit = game.current[1]
+    
+    deduct_coins(game.player_team, 40)
+    unit.atk += 5
+    
+    play_sfx('levelup')
+    game.message = f"⚔️ {unit.name} Attack Boost! ATK: {unit.atk-5}→{unit.atk}"
+    log(f"Attack Boost applied to {unit.name}: ATK +5 (Now: {unit.atk})")
+    
+    return False
+
+def buy_defense_boost(game, total_coins):
+    """Buy defense boost - permanent +3 DEF"""
+    if total_coins < 40:
+        game.message = f"Need 40 coins! (Have {total_coins})"
+        return False
+    
+    if not game.current or game.current[0] != "player":
+        game.message = "Wait for your turn to use items!"
+        return False
+    
+    unit = game.current[1]
+    
+    deduct_coins(game.player_team, 40)
+    unit.defense += 3
+    
+    play_sfx('levelup')
+    game.message = f"🛡️ {unit.name} Defense Boost! DEF: {unit.defense-3}→{unit.defense}"
+    log(f"Defense Boost applied to {unit.name}: DEF +3 (Now: {unit.defense})")
+    
+    return False
+
+def try_recruit(game, total_coins):
+    """Recruit new unit - NOW JOINS BATTLE IMMEDIATELY"""
+    if len(game.player_team) >= 6:
+        game.message = "Team is full! (Max 6 units)"
+        return False
+    
+    if total_coins < 50:
+        game.message = f"Need 50 coins! (Have {total_coins})"
+        return False
+    
+    deduct_coins(game.player_team, 50)
     
     # Create new unit
     prof = random.choice(["Warrior", "Tank"])
@@ -195,13 +308,14 @@ def try_recruit(game):
     new_unit = Unit(f"Recruit{len(game.player_team)+1}", prof, char[2])
     game.player_team.append(new_unit)
     
-    # TC-43: Recruit sound
+    # ADD TO BATTLE IMMEDIATELY!
+    game.turn_order.append(("player", new_unit))
+    
     play_sfx('recruit')
+    game.message = f"👤 {new_unit.name} ({prof}) joined the battle!"
+    log(f"Unit recruited and joined battle: {new_unit.name} ({prof})")
     
-    game.message = f"Recruited {new_unit.name} ({prof}) for 50 coins!"
-    log(f"Unit recruited: {new_unit.name} ({prof})")
-    
-    return False  # Don't count as attack
+    return False
 
 def create_turns(player_team, ai_team):
     """Creates turn order"""
@@ -212,7 +326,6 @@ def create_turns(player_team, ai_team):
         if i < len(ai_team):
             turn_order.append(("ai", ai_team[i]))
     
-    # Add remaining units
     for i in range(min(len(player_team), len(ai_team)), max(len(player_team), len(ai_team))):
         if i < len(player_team):
             turn_order.append(("player", player_team[i]))
@@ -231,7 +344,7 @@ def next_turn(turn_order, turn_idx, game):
         if unit.alive:
             current = (team, unit)
             if team == "player":
-                game.message = f"Your turn: {unit.name}! Select a target"
+                game.message = f"Your turn: {unit.name}! Attack enemy or use shop"
                 log(f"Player turn: {unit.name}")
             else:
                 game.message = f"AI turn: {unit.name}"
@@ -249,20 +362,15 @@ def ai_turn(current, game):
     if not targets: 
         return
     
-    # TC-18: AI targets lowest HP
     target = min(targets, key=lambda x: x.hp)
     
-    # TC-36: Attack sound
     play_sfx('attack')
-    
     dmg = attacker.attack(target)
     game.message = f"{attacker.name} attacked {target.name}! ({dmg} damage)"
     
-    # TC-37: Hit sound
     if dmg > 0:
         play_sfx('hit', 200)
     
-    # TC-38: Defeat sound
     if not target.alive:
         game.message += f" - {target.name} defeated!"
         play_sfx('defeat')

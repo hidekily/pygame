@@ -8,11 +8,11 @@ class Unit:
     def __init__(self, name, prof, sprite_path=None):
         self.name, self.prof, self.rank, self.exp = name, prof, 1, 0
         self.hp_max = self.hp = 100
-        self.coins = 0  # TC-21: Coin system
+        self.coins = 0
         
         if prof == "Warrior":
             self.atk, self.defense = random.randint(5, 20), random.randint(1, 10)
-        else:  # Tank ================================================================================
+        else:  # Tank
             self.atk, self.defense = random.randint(1, 10), random.randint(5, 15)
         
         self.alive = True
@@ -28,68 +28,89 @@ class Unit:
         self.effect_time = 0
         log(f"Unit created: {name} ({prof}) - HP:{self.hp} ATK:{self.atk} DEF:{self.defense}")
     
-def attack(self, target):
-    """Attacks another unit"""
-    # Improved damage formula: guarantees meaningful damage
-    # Base damage from attack stat
-    base_damage = self.atk
-    
-    # Add random variance (30% of attack)
-    variance = random.randint(0, max(1, self.atk // 3))
-    
-    # Defense reduces damage by 30% of defense value
-    defense_reduction = target.defense * 0.3
-    
-    # Calculate final damage (minimum 3)
-    dmg = max(3, int(base_damage + variance - defense_reduction))
-    
-    # APPLY DAMAGE TO TARGET
-    target.hp = max(0, target.hp - dmg)
-    target.alive = target.hp > 0
-    
-    # TC-21: Earn coins from damage (damage ÷ 2)
-    coins_earned = dmg // 2
-    self.coins += coins_earned
-    if coins_earned > 0:
-        log(f"{self.name} earned {coins_earned} coins! (Total: {self.coins})")
-    
-    self.gain_exp(dmg)
-    target_exp = target.defense
-    
-    if dmg > 10:
-        target_exp += int(target_exp * 0.2)
-        log(f"{target.name} +20% bonus EXP (dmg > 10)")
-    elif dmg <= 0:
-        target_exp += int(target_exp * 0.5)
-        log(f"{target.name} +50% bonus EXP (no dmg)")
-    
-    target.gain_exp(target_exp)
-    
-    self.attacking = target.attacked = True
-    self.effect_time = target.effect_time = pygame.time.get_ticks()
-    
-    log(f"ATTACK: {self.name} -> {target.name} | Dmg: {dmg} | {target.name} HP: {target.hp}/{target.hp_max}")
-    if not target.alive: 
-        log(f"{target.name} defeated!")
-    return dmg
+    def attack(self, target):
+        """Attacks another unit with IMPROVED COIN REWARDS"""
+        # Damage calculation
+        base_damage = self.atk
+        variance = random.randint(0, max(1, self.atk // 3))
+        defense_reduction = target.defense * 0.3
+        dmg = max(3, int(base_damage + variance - defense_reduction))
+        
+        # Track if target was alive before attack
+        was_alive = target.alive
+        
+        # Apply damage
+        target.hp = max(0, target.hp - dmg)
+        target.alive = target.hp > 0
+        
+        # ========== IMPROVED COIN SYSTEM ==========
+        
+        # 1. Base coins from damage (more generous)
+        coins_earned = max(2, int(dmg * 0.8))  # 80% of damage as coins
+        
+        # 2. Critical hit bonus (damage >= 15)
+        if dmg >= 15:
+            crit_bonus = random.randint(5, 10)
+            coins_earned += crit_bonus
+            log(f"💥 CRITICAL HIT! +{crit_bonus} bonus coins")
+        
+        # 3. Level bonus (higher levels earn more)
+        level_bonus = (self.rank - 1) * 3
+        coins_earned += level_bonus
+        
+        # 4. HUGE defeat bonus
+        if was_alive and not target.alive:
+            defeat_bonus = 20 + (target.rank * 8)
+            coins_earned += defeat_bonus
+            log(f"💀 {target.name} DEFEATED! +{defeat_bonus} coins bonus!")
+        
+        # Apply coins
+        coins_earned = int(coins_earned)
+        self.coins += coins_earned
+        
+        if coins_earned > 0:
+            log(f"{self.name} earned {coins_earned} coins! (Total: {self.coins})")
+        
+        # Experience system
+        self.gain_exp(dmg)
+        target_exp = target.defense
+        
+        if dmg > 10:
+            target_exp += int(target_exp * 0.2)
+            log(f"{target.name} +20% bonus EXP (dmg > 10)")
+        elif dmg <= 0:
+            target_exp += int(target_exp * 0.5)
+            log(f"{target.name} +50% bonus EXP (no dmg)")
+        
+        target.gain_exp(target_exp)
+        
+        # Visual effects
+        self.attacking = target.attacked = True
+        self.effect_time = target.effect_time = pygame.time.get_ticks()
+        
+        log(f"ATTACK: {self.name} -> {target.name} | Dmg: {dmg} | {target.name} HP: {target.hp}/{target.hp_max}")
+        if not target.alive: 
+            log(f"{target.name} defeated!")
+        
+        return dmg
     
     def gain_exp(self, exp):
-        """Gains experience"""
+        """Gains experience and handles level ups"""
         self.exp += exp
         log(f"{self.name} +{exp} EXP (Total: {self.exp})")
         
-        # Handle multiple level ups (TC-52)
+        # Handle multiple level ups
         while self.exp >= 100:
             self.rank += 1
             self.exp -= 100
             
-            # TC-16: Level Up Stats - ATK +2, DEF +1, MaxHP +10, HP +20
+            # Level up stat increases
             self.atk += 2
             self.defense += 1
             self.hp_max += 10
-            self.hp = min(self.hp + 20, self.hp_max)  # TC-53: Cap at max HP
+            self.hp = min(self.hp + 20, self.hp_max)
             
-            # TC-39: Level up sound
+            # Level up sound
             from utils import play_sfx
             play_sfx('levelup')
             
@@ -104,12 +125,12 @@ def attack(self, target):
         sprite_size = 120
         rect = pygame.Rect(x, y, sprite_size, sprite_size)
         
-        # Turn effect (pulsing) ================================================================================
+        # Turn effect (pulsing glow)
         if is_turn and self.alive:
             pulse = abs((pygame.time.get_ticks() % 800) / 400 - 1) * 4 + 2
             pygame.draw.rect(screen, YELLOW, (x-5, y-5, sprite_size+10, sprite_size+10), int(pulse))
         
-        # Visual effects ================================================================================
+        # Visual effects
         if show_hover and self.hover and self.alive:
             pygame.draw.rect(screen, YELLOW, (x-3, y-3, sprite_size+6, sprite_size+6), 3)
         if self.attacked: 
@@ -117,7 +138,7 @@ def attack(self, target):
         if self.attacking: 
             pygame.draw.rect(screen, GREEN, (x-2, y-2, sprite_size+4, sprite_size+4), 5)
         
-        # Draw sprite or rectangle================================================================================
+        # Draw sprite or rectangle
         if self.sprite: 
             screen.blit(self.sprite, (x, y))
         else: 
@@ -126,35 +147,38 @@ def attack(self, target):
         
         pygame.draw.rect(screen, BLACK, rect, 3)
         
-        # Information BELOW the sprite ================================================================================
+        # Information BELOW the sprite
         info_y = y + sprite_size + 5
         
+        # Name
         f_name = pygame.font.Font(None, 22)
         name_text = f_name.render(self.name[:12], True, WHITE)
         screen.blit(name_text, (x + sprite_size//2 - name_text.get_width()//2, info_y))
         
+        # Level
         f_level = pygame.font.Font(None, 20)
         level_text = f_level.render(f"Level {self.rank}", True, YELLOW)
         screen.blit(level_text, (x + sprite_size//2 - level_text.get_width()//2, info_y + 22))
         
-        # HP Bar ================================================================================
+        # HP Bar
         hp_bar_y = info_y + 44
         hp_bar_width = sprite_size
         pygame.draw.rect(screen, RED, (x, hp_bar_y, hp_bar_width, 12))
         pygame.draw.rect(screen, GREEN, (x, hp_bar_y, int((self.hp/self.hp_max)*hp_bar_width), 12))
         pygame.draw.rect(screen, BLACK, (x, hp_bar_y, hp_bar_width, 12), 2)
         
-        # Stats with labels ================================================================================
+        # Stats
         f_stats = pygame.font.Font(None, 18)
         stats_y = hp_bar_y + 16
         stats = [
-            f"Health: {self.hp}/{self.hp_max}",
-            f"Attack: {self.atk} | Defense: {self.defense}",
-            f"Experience: {self.exp}/100",
-            f"💰 Coins: {self.coins}"  # TC-22: Display coins
+            f"HP: {self.hp}/{self.hp_max}",
+            f"ATK: {self.atk} | DEF: {self.defense}",
+            f"EXP: {self.exp}/100",
+            f"💰 {self.coins}"
         ]
         for i, stat in enumerate(stats):
-            stat_text = f_stats.render(stat, True, WHITE if i < 3 else YELLOW)
+            color = WHITE if i < 3 else (255, 215, 0)
+            stat_text = f_stats.render(stat, True, color)
             screen.blit(stat_text, (x + sprite_size//2 - stat_text.get_width()//2, stats_y + i*18))
         
         return rect
