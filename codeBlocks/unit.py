@@ -28,37 +28,50 @@ class Unit:
         self.effect_time = 0
         log(f"Unit created: {name} ({prof}) - HP:{self.hp} ATK:{self.atk} DEF:{self.defense}")
     
-    def attack(self, target):
-        """Attacks another unit"""
-        dmg = max(0, self.atk - target.defense + random.randint(-5, 10))
-        target.hp = max(0, target.hp - dmg)
-        target.alive = target.hp > 0
-        
-        # TC-21: Earn coins from damage (damage ÷ 2)
-        coins_earned = dmg // 2
-        self.coins += coins_earned
-        if coins_earned > 0:
-            log(f"{self.name} earned {coins_earned} coins! (Total: {self.coins})")
-        
-        self.gain_exp(dmg)
-        target_exp = target.defense
-        
-        if dmg > 10:
-            target_exp += int(target_exp * 0.2)
-            log(f"{target.name} +20% bonus EXP (dmg > 10)")
-        elif dmg <= 0:
-            target_exp += int(target_exp * 0.5)
-            log(f"{target.name} +50% bonus EXP (no dmg)")
-        
-        target.gain_exp(target_exp)
-        
-        self.attacking = target.attacked = True
-        self.effect_time = target.effect_time = pygame.time.get_ticks()
-        
-        log(f"ATTACK: {self.name} -> {target.name} | Dmg: {dmg} | {target.name} HP: {target.hp}/{target.hp_max}")
-        if not target.alive: 
-            log(f"{target.name} defeated!")
-        return dmg
+def attack(self, target):
+    """Attacks another unit"""
+    # Improved damage formula: guarantees meaningful damage
+    # Base damage from attack stat
+    base_damage = self.atk
+    
+    # Add random variance (30% of attack)
+    variance = random.randint(0, max(1, self.atk // 3))
+    
+    # Defense reduces damage by 30% of defense value
+    defense_reduction = target.defense * 0.3
+    
+    # Calculate final damage (minimum 3)
+    dmg = max(3, int(base_damage + variance - defense_reduction))
+    
+    # APPLY DAMAGE TO TARGET
+    target.hp = max(0, target.hp - dmg)
+    target.alive = target.hp > 0
+    
+    # TC-21: Earn coins from damage (damage ÷ 2)
+    coins_earned = dmg // 2
+    self.coins += coins_earned
+    if coins_earned > 0:
+        log(f"{self.name} earned {coins_earned} coins! (Total: {self.coins})")
+    
+    self.gain_exp(dmg)
+    target_exp = target.defense
+    
+    if dmg > 10:
+        target_exp += int(target_exp * 0.2)
+        log(f"{target.name} +20% bonus EXP (dmg > 10)")
+    elif dmg <= 0:
+        target_exp += int(target_exp * 0.5)
+        log(f"{target.name} +50% bonus EXP (no dmg)")
+    
+    target.gain_exp(target_exp)
+    
+    self.attacking = target.attacked = True
+    self.effect_time = target.effect_time = pygame.time.get_ticks()
+    
+    log(f"ATTACK: {self.name} -> {target.name} | Dmg: {dmg} | {target.name} HP: {target.hp}/{target.hp_max}")
+    if not target.alive: 
+        log(f"{target.name} defeated!")
+    return dmg
     
     def gain_exp(self, exp):
         """Gains experience"""

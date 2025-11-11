@@ -101,7 +101,15 @@ while running:
                         game.check_end()
                         if game.state == BATTLE:
                             pygame.time.wait(400)
+                            # Continue advancing turns until it's player's turn
                             game.turn_idx, game.current = battle.next_turn(game.turn_order, game.turn_idx, game)
+                            
+                            # Keep advancing through AI turns
+                            while game.current and game.current[0] == "ai" and game.state == BATTLE:
+                                game.check_end()
+                                if game.state == BATTLE:
+                                    pygame.time.wait(400)
+                                    game.turn_idx, game.current = battle.next_turn(game.turn_order, game.turn_idx, game)
             
             # END ================================================================================
             elif game.state == END:
