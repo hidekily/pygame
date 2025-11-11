@@ -1,9 +1,8 @@
-
-
 import pygame
 import os
 from config import SCREEN_WIDTH, BLACK, GREEN, DARK_GRAY, YELLOW, base_chars
-from utils import btn
+from utils import btn, log
+from unit import Unit
 
 def draw(screen, player_team, selected, m_pos):
     """Draws selection screen"""
@@ -69,9 +68,6 @@ def draw(screen, player_team, selected, m_pos):
 
 def handle_click(pos, player_team, selected):
     """Processes selection clicks"""
-    from unit import Unit
-    from utils import log
-    
     for i in range(6):
         col, row = i % 3, i // 3
         x_pos = 180 + col * 320

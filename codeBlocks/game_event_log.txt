@@ -1,0 +1,28 @@
+=== TURN-BASED BATTLE GAME - EVENT LOG ===
+
+[2025-11-11 15:18:48] Error playing music: No file './sounds/menu.mp3' found in working directory 'C:\Users\dkura\OneDrive\Área de Trabalho\trabalho escola\pygame\codeblocks'.
+[2025-11-11 15:18:48] Game Started
+[2025-11-11 15:18:49] Entered selection
+[2025-11-11 15:18:49] Error playing music: No file './sounds/selection.mp3' found in working directory 'C:\Users\dkura\OneDrive\Área de Trabalho\trabalho escola\pygame\codeblocks'.
+[2025-11-11 15:18:50] Unit created: Warrior (Warrior) - HP:100 ATK:17 DEF:1
+[2025-11-11 15:18:50] Selected: Warrior (Warrior)
+[2025-11-11 15:18:50] Unit created: Tank (Tank) - HP:100 ATK:6 DEF:5
+[2025-11-11 15:18:50] Selected: Tank (Tank)
+[2025-11-11 15:18:51] Unit created: Assassin (Warrior) - HP:100 ATK:6 DEF:9
+[2025-11-11 15:18:51] Selected: Assassin (Warrior)
+[2025-11-11 15:18:52] AI Team Setup
+[2025-11-11 15:18:52] Unit created: IA1 (Tank) - HP:100 ATK:1 DEF:6
+[2025-11-11 15:18:52] Unit created: IA2 (Tank) - HP:100 ATK:2 DEF:11
+[2025-11-11 15:18:52] Unit created: IA3 (Tank) - HP:100 ATK:3 DEF:15
+[2025-11-11 15:18:52] Turn order: P1,AI1,P2,AI2,P3,AI3
+[2025-11-11 15:18:52] Battle Started!
+[2025-11-11 15:18:52] Error playing music: No file './sounds/battle.mp3' found in working directory 'C:\Users\dkura\OneDrive\Área de Trabalho\trabalho escola\pygame\codeblocks'.
+[2025-11-11 15:18:52] Player turn: Warrior
+[2025-11-11 15:18:54] Warrior +11 EXP (Total: 11)
+[2025-11-11 15:18:54] IA1 +20% bonus EXP (dmg > 10)
+[2025-11-11 15:18:54] IA1 +7 EXP (Total: 7)
+[2025-11-11 15:18:54] ATTACK: Warrior -> IA1 | Dmg: 11 | IA1 HP: 89/100
+[2025-11-11 15:18:54] AI turn: IA1
+[2025-11-11 15:18:54] IA1 +9 EXP (Total: 16)
+[2025-11-11 15:18:54] Warrior +1 EXP (Total: 12)
+[2025-11-11 15:18:54] ATTACK: IA1 -> Warrior | Dmg: 9 | Warrior HP: 91/100

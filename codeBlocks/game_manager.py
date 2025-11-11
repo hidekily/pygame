@@ -2,7 +2,6 @@ import random
 from unit import Unit
 from config import MENU, BATTLE, END, base_chars, Battle_music, Win_music, Loss_music
 from utils import log, save_log, play_music
-from battle import create_turns
 
 class GameManager:
     def __init__(self):
@@ -16,7 +15,7 @@ class GameManager:
         self.current = None
     
     def reset(self):
-        """Game Reset"""
+        """Resets the game"""
         self.player_team = []
         self.ai_team = []
         self.selected = [False] * 6
@@ -28,13 +27,15 @@ class GameManager:
         log("Game Reset")
     
     def start_battle(self):
-        """Init BAttle"""
+        """Starts the battle"""
         log("AI Team Setup")
         for i in range(3):
             prof = random.choice(["Warrior", "Tank"])
             ai_sprite = random.choice(base_chars)[2]
             self.ai_team.append(Unit(f"IA{i+1}", prof, ai_sprite))
         
+        # Import here to avoid circular import
+        from battle import create_turns
         self.turn_order = create_turns(self.player_team, self.ai_team)
         self.turn_idx = -1
         self.state = BATTLE
@@ -42,7 +43,7 @@ class GameManager:
         play_music(Battle_music)
     
     def check_end(self):
-        """Verify Battle"""
+        """Checks for game over"""
         p_alive = sum(1 for p in self.player_team if p.alive)
         ai_alive = sum(1 for p in self.ai_team if p.alive)
         
@@ -61,7 +62,7 @@ class GameManager:
             save_log()
     
     def get_game_state(self):
-        """Return current game state"""
+        """Returns current game state"""
         return {
             'player_team': self.player_team,
             'ai_team': self.ai_team,

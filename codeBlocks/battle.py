@@ -1,4 +1,3 @@
-
 import pygame
 from config import SCREEN_WIDTH, GREEN, RED, YELLOW, BLACK, WHITE
 from utils import log, event_log
@@ -85,7 +84,7 @@ def draw(screen, player_team, ai_team, current, message, m_pos):
         screen.blit(txt, tr)
 
 def handle_click(pos, player_team, ai_team, current, game_state):
-    """attack function"""
+    """Processes attacks in battle"""
     if current and current[0] == "player":
         for i, p in enumerate(ai_team):
             x_pos = 960
@@ -100,7 +99,7 @@ def handle_click(pos, player_team, ai_team, current, game_state):
     return False
 
 def create_turns(player_team, ai_team):
-    """turn function"""
+    """Creates turn order"""
     turn_order = []
     for i in range(3):
         turn_order.append(("player", player_team[i]))
@@ -109,7 +108,7 @@ def create_turns(player_team, ai_team):
     return turn_order
 
 def next_turn(turn_order, turn_idx, game_state):
-    """next turn function"""
+    """Advances to next turn"""
     attempts = 0
     while attempts < len(turn_order):
         turn_idx = (turn_idx + 1) % len(turn_order)
@@ -129,7 +128,7 @@ def next_turn(turn_order, turn_idx, game_state):
     return turn_idx, None
 
 def ai_turn(current, game_state):
-    """IA TURN"""
+    """AI turn logic"""
     team, attacker = current
     targets = [p for p in game_state['player_team'] if p.alive]
     if not targets: 

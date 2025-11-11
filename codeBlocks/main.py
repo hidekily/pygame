@@ -1,7 +1,7 @@
 import pygame
 import sys
 
-# components imports
+# Import game modules
 from config import *
 from utils import log, save_log, load_bg, play_music
 from game_manager import GameManager
@@ -10,7 +10,7 @@ import selection
 import battle
 import end
 
-# init game ================================================================================
+# Initialization ================================================================================
 pygame.init()
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 pygame.display.set_caption("Turn-Based Battle Game")
@@ -20,7 +20,7 @@ clock = pygame.time.Clock()
 pygame.mixer.init()
 pygame.mixer.music.set_volume(0.5)
 
-# Load Bg =========================================
+# Load backgrounds ==========================================
 menu_bg = load_bg(MENU_BG, SCREEN_WIDTH, SCREEN_HEIGHT)
 battle_bg = load_bg(BATTLE_BG, SCREEN_WIDTH, SCREEN_HEIGHT)
 selection_bg = load_bg(SELECTION_BG, SCREEN_WIDTH, SCREEN_HEIGHT)
@@ -31,7 +31,7 @@ game = GameManager()
 play_music(Menu_music)
 log("Game Started")
 
-# Main loop ================================================================================
+# Main game loop ================================================================================
 running = True
 
 while running:
