@@ -10,7 +10,7 @@ music_enabled = True
 sfx_enabled = True
 music_volume = 0.5
 
-# Preload sound effects (TC-48: Handle missing sounds)
+# Preload sound effects
 sounds = {}
 sound_files = {
     'attack': './sounds/attack.mp3',
@@ -38,7 +38,6 @@ def load_sounds():
             print(f"Error loading {name}: {e}")
 
 def play_sfx(sound_name, delay=0):
-    """TC-36 to TC-43: Play sound effect with optional delay"""
     if not sfx_enabled or sound_name not in sounds or sounds[sound_name] is None:
         return
     
